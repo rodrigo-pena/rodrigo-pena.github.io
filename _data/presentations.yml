@@ -1,18 +1,41 @@
 # My Publications - Presentations, Meetings, Talks
 
-# - title:
-#   year:
-#   author:
-#   - given:
-#     given_initial:
-#     family:
-#     role:
-#   - given:
-#     given_initial:
-#     family:
-#   - given:
-#     given_initial:
-#     family:
-#   source:
-#   city:
-#   fulltext: title.pdf
+- title: Convex recovery under linear measurements
+  year: 2018
+  author:
+  - given: Rodrigo
+    given_initial: R.
+    family: Pena
+  source: LTS2 Internal Seminar (EPFL)
+  city: Lausanne
+  fulltext: 2018-02-02-convex-recovery.pdf
+
+- title: Transductive learning & RKHS on graphs
+  year: 2017
+  author:
+  - given: Rodrigo
+    given_initial: R.
+    family: Pena
+  source: LTS2 Internal Seminar (EPFL)
+  city: Lausanne
+  fulltext: 2017-05-05-transductive-rkhs.pdf
+
+- title: Graph learning perspectives in statistics and signal processing
+  year: 2016
+  author:
+  - given: Rodrigo
+    given_initial: R.
+    family: Pena
+  source: Candidacy exam presentation (EDIC-EPFL)
+  city: Lausanne
+  fulltext: 2016-08-05-candidacy-exam.pdf
+
+- title: Source localization via l1-recovery and spectral graph theory
+  year: 2016
+  author:
+  - given: Rodrigo
+    given_initial: R.
+    family: Pena
+  source: IVMSP Poster Session
+  city: Bordeaux
+  fulltext: 2016-ivmsp.pdf

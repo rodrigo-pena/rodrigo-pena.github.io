@@ -1,14 +1,15 @@
 ---
 layout: page
 title: Publications
-description: Publication compilation.
+description: Papers, posters, presentations
 header-img: images/software-0.jpg
 comments: false
-modified: 2018-03-08
+date: 2018-03-08
+modified: 2018-03-09
 ---
 
 <div markdown="0">
-    <a href="https://scholar.google.ch/citations?user=goU84qYAAAAJ&hl=en" class="btn btn-info">Google Scholar Profile</a>
+    <a href="https://scholar.google.ch/citations?user=goU84qYAAAAJ&hl=en" class="btn btn-info">Google Scholar</a>
 </div>
 
 ## Articles
@@ -26,14 +27,17 @@ modified: 2018-03-08
     </div>
     <div class='author'>
     {% for author in article.author %}
-        <span class='{{ author.role }}'>{{ author.family }}, {{ author.given_initial }}{% if author.role contains 'corr' %}*{% endif %}; </span>
+        <span class='{{ author.role }}'>{{ author.family }}, {{ author.given_initial }}{% if author.role contains 'corr' %}*{% endif %}, </span>
     {% endfor %}
     </div>
     <div class="pubinfo">
-    <span class="source">{{ article.journal.abbreviation }} </span><span class="year">{{ article.year }}, </span><span class="volume">{{ article.volume }}, </span><span class="page">{{ article.page }}.</span>{% if article.language != 'english' %}<span class="language"> (In {{ article.language }})</span>{% endif %}
+    <span class="source">{{ article.journal.abbreviation }} </span><span class="year">{{ article.year }}{% if article.volume %}, </span><span class="volume">{{ article.volume }}{% endif %}{% if article.page %}, </span><span class="page">{{ article.page }}{% endif %}.</span>
     </div>
     <div class="url">
-        <a href="{{ article.URL }}">{{ article.URL }}</a>
+        (<a href="{{ article.URL }}">URL</a>
+        {% if article.code %}
+            | <a href="{{ article.code }}">code</a>
+        {% endif %})
     </div>
     </li>
 {% endfor %}
@@ -55,7 +59,7 @@ modified: 2018-03-08
     </div>
     <div class='author'>
     {% for author in presentation.author %}
-        <span class='{{ author.role }}'>{{ author.family }}, {{ author.given_initial }}; </span>
+        <span class='{{ author.role }}'>{{ author.family }}, {{ author.given_initial }}, </span>
     {% endfor %}
     </div>
     <div class="pubinfo">
@@ -66,7 +70,7 @@ modified: 2018-03-08
 </ol>
 </div>
 
-## Thesis
+## Thesis and other reports
 -----
 
 <div class='panel-pub'>

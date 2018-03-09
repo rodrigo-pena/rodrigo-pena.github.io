@@ -18,3 +18,10 @@ modified: 2018-03-08
 [ss1b]: http://edu.epfl.ch/coursebook/en/signals-and-systems-i-for-sv-MICRO-310-B
 [ss2a]: http://edu.epfl.ch/coursebook/en/signals-and-systems-ii-for-mt-MICRO-311-A
 [ss2b]: http://edu.epfl.ch/coursebook/en/signals-and-systems-ii-for-mt-MICRO-311-B
+
+## Supervision
+* EPFL
+  * "Graph representation of music database" (co-supervised with [Kirell Benzi][kirell]). Master's semester project, Hector Parmantier and Adrien Basille, Fall 2016.
+
+
+[kirell]: https://www.kirellbenzi.com/

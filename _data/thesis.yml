@@ -1,20 +1,20 @@
 # My Publications - Thesis
 
-# - id:
-#   title:
-#   page:
-#   year:
-#   advisor:
-#   - given:
-#     given_initial:
-#     family:
-#     role:
-#   author:
-#   - given:
-#     given_initial:
-#     family:
-#     role:
-#   publisher:
-#   city:
-#   source:
-#   fulltext: 'title.pdf'
+- id:
+  title: Graph learning perspectives in statitics and signal processing
+  page:
+  year: 2016
+  advisor:
+  - given: Pierre
+    given_initial: P.
+    family: Vanderheynst
+    role: Supervisor
+  author:
+  - given: Rodrigo
+    given_initial: R.
+    family: Pena
+    role:
+  publisher:
+  city: Lausanne
+  source: Candidacy exam write-up (EDIC-EPFL)
+  fulltext: '2016-07-candidacy-write-up.pdf'

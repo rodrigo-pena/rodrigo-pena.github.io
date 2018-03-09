@@ -1,7 +1,7 @@
 # Site settings
 title: Rodrigo Pena
 description: Rodrigo Pena is a CS Ph.D. student at EPFL.
-disqus_shortname: rpena
+disqus_shortname: rodpena
 reading_time:     true
 words_per_minute: 200
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -22,7 +22,7 @@ owner:
   institutional-website: https://people.epfl.ch/254838?lang=en
 
 # Background image to be tiled on all pages
-background:
+background: background-6.jpg
 
 # Analytics and webmaster tools stuff goes here
 google_analytics: UA-115358555-1  # Analytics Property ID
@@ -41,7 +41,7 @@ sass:
   style: compressed
 
 # http://jekyllrb.com/docs/permalinks/
-permalink: /:year/:month/:title  #/:categories/:title/
+permalink: /:year/:month/:title
 
 # Amount of post to show on home page
 paginate: 5
@@ -55,14 +55,6 @@ kramdown:
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..3
-  # use_coderay: true
-
-  # coderay:
-  #   coderay_line_numbers: inline
-  #   coderay_line_numbers_start: 1
-  #   coderay_tab_width: 4
-  #   coderay_bold_every: 10
-  #   coderay_css: class
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
