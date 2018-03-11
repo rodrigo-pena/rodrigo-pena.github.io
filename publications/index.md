@@ -2,10 +2,10 @@
 layout: page
 title: Publications
 description: Papers, posters, presentations
-header-img: images/software-0.jpg
+header-img: images/background-5.png
 comments: false
 date: 2018-03-08
-modified: 2018-03-09
+modified: 2018-03-11
 ---
 
 <div markdown="0">

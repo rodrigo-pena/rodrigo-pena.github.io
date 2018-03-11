@@ -1,15 +1,32 @@
 ---
 layout: page
 title: About
-header-img: images/software-0.jpg
+header-img: images/background-5.png
 comments: false
-modified: 2018-03-08
+date: 2018-03-08
+modified: 2018-03-11
 ---
+
+<style type="text/css">
+.image-right {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
+}
+
+.image-left {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+}
+</style>
 
 ## Welcome
 
-My name is Rodrigo Pena.<br/>
-I was born and raised in a [modernist island](https://en.wikipedia.org/wiki/Bras%C3%ADlia) in the dry Brazilian highlands.<br/>
+![Gravatar](https://www.gravatar.com/avatar/d6082dc6dc6e58d0b45f2a3363725ca4?s=256&d=identicon){: .image-right} My name is Rodrigo Pena.<br/>
+I was born and raised on a [modernist island](https://en.wikipedia.org/wiki/Bras%C3%ADlia) in the dry Brazilian highlands.<br/>
 Since 2015, I have been pursuing a Ph.D in computer science at [EPFL](https://www.epfl.ch/index.en.html).
 
 **Doctoral Assistant**  
@@ -26,6 +43,8 @@ Website: <a href="{{ site.owner.institutional-website }}">institutional</a>
     <a href="{{ site.url }}/CV/" class="btn btn-info">View HTML</a>
     <a href="{{ site.url }}/downloads/CV.pdf" class="btn btn-success">Download PDF</a>
 </div>
+
+----
 
 #### About This Website
 

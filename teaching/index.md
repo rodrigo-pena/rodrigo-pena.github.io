@@ -2,9 +2,10 @@
 layout: page
 title: Teaching
 description: "My teaching activities"
-header-img: images/software-0.jpg
+header-img: images/background-5.png
 comments: false
-modified: 2018-03-08
+date: 2018-03-08
+modified: 2018-03-11
 ---
 
 ## Teaching assistantship
