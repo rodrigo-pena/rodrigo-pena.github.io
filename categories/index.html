@@ -1,12 +1,22 @@
 ---
 layout: post-index
-title: Category Archive
-description: "Posts sorted by category."
+title: Categories
+description: "Posts sorted by category"
+header-img:
 comments: false
 ---
 
 {% capture site_categories %}{% for category in site.categories %}{{ category | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign categories_list = site_categories | split:',' | sort %}
+
+<article class="hentry">
+  <header>
+    <h2 class="tag-heading">Category list</h2>
+  </header>
+  <div class="entry-meta">
+      <span class="entry-tags">{% for category in categories_list %}<a href="{{ site.url }}/categories/#{{ category }}" class="tag"><span class="term">{{ category }}</span></a>{% unless forloop.last %}{% endunless %}{% endfor %}</span>
+  </div><!-- /.entry-meta -->
+</article><!-- /.hentry -->
 
 {% for item in (0..site.categories.size) %}{% unless forloop.last %}
   {% capture this_word %}{{ categories_list[item] | strip_newlines }}{% endcapture %}

@@ -2,7 +2,7 @@
 layout: page
 title: Publications
 description: Papers, posters, presentations
-header-img: images/background-5.png
+header-img:
 comments: false
 date: 2018-03-08
 modified: 2018-03-11

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-header-img: images/background-5.png
+header-img:
 comments: false
 date: 2018-03-08
 modified: 2018-03-11
@@ -37,11 +37,13 @@ Switzerland<br/>
 Email: <a href="mailto:{{ site.owner.email }}">{{ site.owner.email }}</a><br/>
 Website: <a href="{{ site.owner.institutional-website }}">institutional</a>
 
-**Curriculum Vitae**
+----
 
-<div markdown="0">
+**Curriculum Vitae (CV)**
+
+<div markdown="0" style="text-align: center">
     <a href="{{ site.url }}/CV/" class="btn btn-info">View HTML</a>
-    <a href="{{ site.url }}/downloads/CV.pdf" class="btn btn-success">Download PDF</a>
+    <a href="{{ site.url }}/downloads/CV.pdf" class="btn btn-danger">Download PDF</a>
 </div>
 
 ----

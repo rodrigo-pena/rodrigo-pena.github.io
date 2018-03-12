@@ -2,13 +2,13 @@
 layout: page
 title: Coding
 description: Development and contributions
-header-img: images/background-5.png
+header-img:
 comments: false
 date: 2018-03-08
 modified: 2018-03-09
 ---
 
-<div markdown="0">
+<div markdown="0" style="text-align: center">
     <a href="https://github.com/rodrigo-pena" class="btn btn-info">github</a>
 </div>
 

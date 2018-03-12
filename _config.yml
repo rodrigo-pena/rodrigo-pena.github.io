@@ -6,13 +6,13 @@ reading_time:     true
 words_per_minute: 200
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-header-img:
+header-img: images/background.png
 excerpt_separator: "<!--more-->"
 
 # Owner/author information
 owner:
-  name: Rodrigo Pena
-  avatar:
+  name: Rodrigo C. G. Pena
+  avatar: me.png
   bio: I am a CS Ph.D. student at EPFL (Switzerland) since July 2015. I received my B.Eng. in Electrical Engineering from the University of Brasília (Brazil) in 2014. I was also an exchange student at ENSEIRB-MATMECA (France) in 2012-2013.
   email: rodrigo.pena@epfl.ch
   twitter:

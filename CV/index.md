@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CV
-header-img: images/background-5.png
+header-img:
 comments: false
 date: 2018-03-08
 modified: 2018-03-11
@@ -59,5 +59,5 @@ Please visit this [page]({{ site.url }}/publications/).
 
 <div markdown="0">
     <br><br>
-    <a href="{{ site.url }}/downloads/CV.pdf" class="btn btn-success">Download PDF Version</a>
+    <a href="{{ site.url }}/downloads/CV.pdf" class="btn btn-danger">Download PDF Version</a>
 </div>

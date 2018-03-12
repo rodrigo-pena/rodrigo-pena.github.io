@@ -4,13 +4,12 @@ title: Know your sources
 description: Presentation of a solution for the problem of source localization on graphs
 author: Rodrigo Pena
 date: 2018-03-09
-modified: 2018-03-09
+modified: 2018-03-12
 image:
-    feature: blog/2018-03-09/feature_know_your_sources.jpeg
-categories: [Inverse Problems, GSP]
+    feature:
+categories: [Inverse Problems, Graph Signal Processing]
 tags: [l1-norm, graphs, spectrum, non-convex]
 ---
-
 
 > <p style="text-align: center">
 This is a recovered post from a blog I used to maintain. It was written right before I attended the 2016 IEEE IVMSP workshop in Bordeaux, France, where I presented the work described in this post. Enjoy.</p>
@@ -19,7 +18,11 @@ This is a recovered post from a blog I used to maintain. It was written right be
 
 # Prologue
 
+<!--excerpt.start-->
+
 Picture yourself in London, 1857. Just a few years before, a sudden cholera outbreak left hundreds of people dead or terribly ill in the Soho area. Whenever the subject is brought up in conversation you always hear the self-proclaimed specialists blame the “bad airs” in the region for the tragedy brought upon the neighborhood. But you don’t really believe that, do you? Your inquisitive mind wants to figure out what really happened, and a map that you had laying around inspired you to pinpoint the locations and numbers of every casualty of the [1854 outbreak](https://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak).
+
+<!--excerpt.end-->
 
 At first the data might not tell you much more than the fact that cholera really did kill a lot of people in Soho that year. But you are a creative physician, and you had been playing with the idea that cholera might be transmissible by water. The houses weren’t supplied with running water, and people had to bring water containers filled at nearby public pumps back home if they wanted to drink, cook, or shower. You finally decide you should pinpoint the locations of the water pumps on the Soho map as well, and lo and behold: all the deaths seem to cluster around the pump on Broad Street (see the red circle near the centre of the figure below).
 
