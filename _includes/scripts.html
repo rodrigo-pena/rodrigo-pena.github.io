@@ -40,23 +40,3 @@
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 
 {% if page.comments != false %}{% include disqus_comments.html %}{% endif %}
-
-<!-- Facebook SDK -->
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '280515019153192',
-      xfbml      : true,
-      version    : 'v2.12'
-    });
-    FB.AppEvents.logPageView();
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
