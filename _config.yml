@@ -5,7 +5,7 @@ disqus_shortname: rodpena
 reading_time:     true
 words_per_minute: 200
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://rodrigo-pena.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 header-img: images/background.png
 excerpt_separator: "<!--more-->"
 
