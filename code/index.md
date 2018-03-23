@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Coding
+title: Code
 description: Development and contributions
 header-img:
 comments: false
@@ -8,7 +8,7 @@ date: 2018-03-08
 modified: 2018-03-09
 ---
 
-<div markdown="0" style="text-align: center">
+<div markdown="0" style="text-align: left">
     <a href="https://github.com/rodrigo-pena" class="btn btn-info">github</a>
 </div>
 

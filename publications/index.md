@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Publications
+title: Talks / Publications
 description: Papers, posters, presentations
 header-img:
 comments: false
