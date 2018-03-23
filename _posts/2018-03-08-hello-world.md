@@ -11,7 +11,7 @@ categories: [Miscellaneous]
 tags: [misc]
 ---
 
-This is my first post. [link](https://rodrigo-pena.github.io/)
+This is my first post.
 
 <!--more-->
 
