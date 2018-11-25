@@ -4,10 +4,13 @@ title: CV
 header-img:
 comments: false
 date: 2018-03-08
-modified: 2018-03-11
+modified: 2018-11-25
 ---
 
 ## Rodrigo C. G. Pena
+
+
+### Contact
 -----
 École Polytechnique Fédérale de Lausanne<br/>
 EPFL-STI-IEL-LTS2<br/>
@@ -17,7 +20,7 @@ Email: <a href="mailto:{{ site.owner.email }}">{{ site.owner.email }}</a>
 
 ### Research Interests
 -----
-Signal Processing, High-dimensional Statistics, Machine Learning.
+Graph Signal Processing, High-dimensional Statistics, Machine Learning.
 
 ### Education
 -----
@@ -31,7 +34,7 @@ Signal Processing, High-dimensional Statistics, Machine Learning.
 ### Teaching
 -----
 
-Please visit this [page]({{ site.url }}/teaching/).
+List provided separately at this [page]({{ site.url }}/teaching/).
 
 ### Awards and Fellowships
 -----
@@ -55,7 +58,7 @@ Please visit this [page]({{ site.url }}/teaching/).
 ### Publications
 -----
 
-Please visit this [page]({{ site.url }}/publications/).
+List provided separately at this [page]({{ site.url }}/publications/).
 
 <div markdown="0">
     <br><br>
