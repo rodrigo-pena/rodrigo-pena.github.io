@@ -1,6 +1,9 @@
 # general configuration
-url: ''
+url: '' # base hostname & protocol of the site, e.g. http://example.com
 baseurl: ''
+reading_time: true
+words_per_minute: 200
+excerpt_separator: "<!--more-->"
 
 # personal configuration
 owner:
@@ -14,12 +17,24 @@ owner:
   logo: /images/me.png # (optional) an avatar or logo
   tagline: Researcher # (optional) tagline under the title
 
-# exclude
-exclude: ["CNAME", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+# analytics
+google_analytics: UA-115358555-1  # Analytics Property ID
+google_verify: Z1RJE6QhVYyI4ypHTDgE1oOIt_VPwNrwgxUK7wv1f38  # Webmaster
+
+# tz database name http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/Zurich
 
 # dependencies
 markdown: kramdown
 highlighter: rouge
 
-# permalinks
-permalink: pretty
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+
+permalink: /:year/:month/:title
+paginate: 5
+paginate_path: "blog/page:num/"
+
+# exclude
+exclude: ["CNAME", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]

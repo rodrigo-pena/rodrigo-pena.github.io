@@ -1,0 +1,10 @@
+# Menu navigation links
+
+- title:    Blog
+  url:      /blog/
+
+- title:    Publications
+  url:      /publications/
+
+- title:    Presentations
+  url:      /presentations/

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+    {% include head.html %}
+
+    <body>
+
+    <div class="wrapper" {% if page.image.feature %}class="feature"{% endif %}>
+
+        {% if page.image.feature %}
+            <div>
+                {% if page.image.credit %}
+                    <div class="image-credit">Image source:
+                        {% if page.image.creditlink %}
+                            <a href="{{ page.image.creditlink }}">
+                        {% endif %}
+                        {{ page.image.credit }}
+                        {% if page.image.creditlink %}
+                            </a>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            <div>
+                <img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}">
+            </div>
+            </div>
+        {% endif %}
+
+        <header>
+            <!--TODO: Fix hyperlinks in header -->
+
+            <hr />
+
+            <ul class="fa-ul main-list">
+                <li class="main-list-item">
+                    <span class="fa fa-home fa-lg main-list-item-icon"></span>
+                    <a href="{{ site.url }}">Home</a>
+                </li>
+            </ul>
+
+            <hr />
+
+            {% if page.link %}
+                <h1><i class="fa fa-bookmark permalink"></i>
+                    <a href="{{ page.link }}">{{ page.title }}</a>
+                </h1>
+            {% else %}
+                <h1 class="entry-title">{{ page.title }}</h1>
+            {% endif %}
+
+            <h2>
+                <span class="entry-date date published">
+                    <time datetime="{{ page.date | date_to_xmlschema }}">
+                        {{ page.date | date: "%B %d, %Y" }}
+                    </time>
+                </span>
+            </h2>
+
+            {% if site.reading_time %}
+                <p>
+                    <i class="fa fa-clock-o"></i>
+                    {% assign readtime = content | number_of_words | divided_by:site.words_per_minute %}
+                    Reading time ~{% if readtime <= 1 %}1 minute{% else %}{{ readtime }} minutes{% endif %}
+                </p>
+            {% endif %}
+
+        </header>
+
+        <main>
+
+            <div class="content">
+
+            {{ content }}
+
+            </div>
+
+        </main>
+
+        {% if page.modified %}
+            <footer class="poweredby">
+            <p>Updated on {{ page.modified | date: "%B %d, %Y" }}</p>
+            </footer>
+        {% endif %}
+
+    </div>
+
+    </body>
+
+</html>

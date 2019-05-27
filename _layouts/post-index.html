@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+    {% include head.html %}
+
+    <body>
+
+    <div class="wrapper">
+
+        <header>
+            <!--TODO: Fix hyperlinks in header -->
+
+            <hr />
+
+            <ul class="fa-ul main-list">
+                <li class="main-list-item">
+                    <span class="fa fa-home fa-lg main-list-item-icon"></span>
+                    <a href="{{ site.url }}">Home</a>
+                </li>
+            </ul>
+
+            <hr />
+
+            {% if page.image %}
+                <div class="logo-container">
+                    <a class="logo" href="{{ site.url }}{{ page.url }}" title="{{ page.title }}">
+                        <img src="{{ site.url }}/images/{{ page.image }}" alt="{{ page.title }}">
+                    </a>
+                </div>
+            {% endif %}
+
+            {% if page.title %}
+                <div class="author-container"><h1>{{ page.title }}</h1></div>
+            {% endif %}
+
+        </header>
+
+        <main>
+
+            <div class="content">
+
+            {{ content }}
+
+            </div>
+
+        </main>
+
+        {% if page.modified %}
+            <footer class="poweredby">
+            <p>Updated on {{ page.modified | date: "%B %d, %Y" }}</p>
+            </footer>
+        {% endif %}
+
+    </div>
+
+    </body>
+
+</html>
