@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+  <div class="wrapper">
+
+      <header>
+
+          {% if site.owner.logo %}
+            <div class="logo-container">
+              <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}{{ site.owner.logo }}')"></a>
+            </div>
+          {% endif %}
+
+          {% if site.owner.author %}
+            <div class="author-container"><h1>{{ site.owner.author }}</h1></div>
+          {% endif %}
+
+          {% if site.owner.tagline %}
+            <div class="tagline-container"><p>{{ site.owner.tagline }}</p></div>
+          {% endif %}
+
+      </header>
+
+      <main>
+
+        <div class="content">
+
+          {{ content }}
+
+          <hr />
+
+          <!-- External links -->
+          <ul class="fa-ul main-list">
+
+            <li class="main-list-item">
+                <span class="fa fa-envelope fa-lg main-list-item-icon"></span>
+                <a href="mailto:{{ site.owner.email.handle }}@{{ site.owner.email.provider }}">Email</a>
+            </li>
+
+            <li class="main-list-item">
+              <span class="fa fa-github fa-lg main-list-item-icon"></span>
+              <a href="https://github.com/rodrigo-pena">GitHub</a>
+            </li>
+
+            <li class="main-list-item">
+              <span class="ai ai-google-scholar-square ai-lg main-list-item-icon"></span>
+              <a href="https://scholar.google.ch/citations?user=goU84qYAAAAJ&hl=en">Google Scholar</a>
+            </li>
+
+            <li class="main-list-item">
+              <span class="fa fa-linkedin fa-lg main-list-item-icon"></span>
+              <a href="https://www.linkedin.com/in/rodrigocgpena/">LinkedIn</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </main>
+
+      {% if page.modified %}
+        <footer class="poweredby">
+          <p>Updated on {{ page.modified | date: "%B %d, %Y" }}</p>
+        </footer>
+      {% endif %}
+
+  </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,25 @@
+# Peer-reviewed publications
+
+- title: 'Source Localization on graphs via l1 recovery and spectral graph theory'
+  volume:
+  page: 1-5
+  year: 2016
+  author:
+  - given: Rodrigo
+    given_initial: R.
+    family: Pena
+    role: main
+  - given: Xavier
+    given_initial: X.
+    family: Bresson
+  - given: Pierre
+    given_initial: P.
+    family: Vandergheynst
+  journal:
+    fullname: IEEE 12th Image, Video, and Multidimensional Signal Processing Workshop
+    abbreviation: IVMSP
+  URL: "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7528230&isnumber=7528174"
+  type: conference
+  DOI: 10.1109/IVMSPW.2016.7528230
+  fulltext: 2016-src-loc-ivmsp.pdf
+  code: "https://github.com/rodrigo-pena/src-localization-graphs"

@@ -1,100 +1,110 @@
 ---
 layout: page
-title: Talks / Publications
-description: Papers, posters, presentations
+title: Publications
+description:
 header-img:
-comments: false
 date: 2018-03-08
-modified: 2018-03-11
+modified: 2018-05-27
 ---
 
-<div markdown="0">
-    <a href="https://scholar.google.ch/citations?user=goU84qYAAAAJ&hl=en" class="btn btn-info">Google Scholar</a>
-</div>
+{% if site.data.peer-reviewed %}
 
-## Articles
+## Peer-reviewed
 -----
 
-<div class='panel-pub'>
-<ol>
-{% for article in site.data.articles %}
-    <li>
-    <div class="title">
-    <span class="title">{{ article.title }}</span>
-    {% if article.fulltext %}
-        <a title="fulltext" href="{{ site.url }}/downloads/articles/{{ article.fulltext }}"><i class="fa fa-file-pdf-o"></i></a>
-    {% endif %}
-    </div>
-    <div class='author'>
-    {% for author in article.author %}
-        <span class='{{ author.role }}'>{{ author.family }}, {{ author.given_initial }}{% if author.role contains 'corr' %}*{% endif %}, </span>
+<div>
+    <ol>
+    {% for pub in site.data.peer-reviewed %}
+        <li>
+            <div>
+                <span>{{ pub.title }}</span>
+                {% if pub.fulltext %}
+                    <a title="fulltext" href="{{ site.url }}/downloads/peer-reviewed/{{ pub.fulltext }}"><i class="fa fa-file-pdf-o"></i></a>
+                {% endif %}
+                </div>
+                <div>
+                {% for author in pub.author %}
+                    <span>{{ author.family }}, {{ author.given_initial }}{% if author.role contains 'corr' %}*{% endif %}, </span>
+                {% endfor %}
+                </div>
+                <div>
+                <span>{{ pub.journal.abbreviation }} </span><span>{{ pub.year }}{% if pub.volume %}, </span><span>{{ pub.volume }}{% endif %}{% if pub.page %}, </span><span>{{ pub.page }}{% endif %}.</span>
+            </div>
+            <div>
+                (<a href="{{ pub.URL }}">URL</a>
+                {% if pub.code %}
+                    | <a href="{{ pub.code }}">code</a>
+                {% endif %})
+            </div>
+        </li>
     {% endfor %}
-    </div>
-    <div class="pubinfo">
-    <span class="source">{{ article.journal.abbreviation }} </span><span class="year">{{ article.year }}{% if article.volume %}, </span><span class="volume">{{ article.volume }}{% endif %}{% if article.page %}, </span><span class="page">{{ article.page }}{% endif %}.</span>
-    </div>
-    <div class="url">
-        (<a href="{{ article.URL }}">URL</a>
-        {% if article.code %}
-            | <a href="{{ article.code }}">code</a>
-        {% endif %})
-    </div>
-    </li>
-{% endfor %}
-</ol>
+    </ol>
 </div>
 
-## Presentations and Posters
+{% endif %}
+
+{% if site.data.pre-print %}
+
+## Pre-prints
 -----
 
-<div class='panel-pub'>
-<ol>
-{% for presentation in site.data.presentations %}
-    <li>
-    <div class="title">
-    <span class="title">{{ presentation.title }}</span>
-    {% if presentation.fulltext %}
-        <a title="fulltext" href="{{ site.url }}/downloads/presentations/{{ presentation.fulltext }}"><i class="fa fa-file-pdf-o"></i></a>
-    {% endif %}
-    </div>
-    <div class='author'>
-    {% for author in presentation.author %}
-        <span class='{{ author.role }}'>{{ author.family }}, {{ author.given_initial }}, </span>
+<div>
+    <ol>
+        {% for pub in site.data.pub-pre-print %}
+        <li>
+            <div>
+            <span>{{ pub.title }}</span>
+            {% if pub.fulltext %}
+                <a title="fulltext" href="{{ site.url }}/downloads/pre-print/{{ pub.fulltext }}"><i class="fa fa-file-pdf-o"></i></a>
+            {% endif %}
+            </div>
+            <div>
+            {% for author in pub.author %}
+                <span>{{ author.family }}, {{ author.given_initial }}</span>
+            {% endfor %}
+            </div>
+            {% for advisor in pub.advisor %}
+                <span>{{ advisor.role }}: {{ advisor.family }}, {{ advisor.given_initial }}</span>
+            {% endfor %}
+            <div>
+                <span>{{ pub.source }} </span><span>{{ pub.publisher }}, </span><span>{{ pub.year }}.</span>
+            </div>
+        </li>
     {% endfor %}
-    </div>
-    <div class="pubinfo">
-    <span class="source">{{ presentation.source }} </span><span class="city">{{ presentation.city }}, </span><span class="year">{{ presentation.year }}.</span>
-    </div>
-    </li>
-{% endfor %}
-</ol>
+    </ol>
 </div>
 
-## Thesis and other reports
+{% endif %}
+
+{% if site.data.thesis %}
+
+## Thesis
 -----
 
-<div class='panel-pub'>
-<ol>
-{% for thesis in site.data.thesis %}
-    <li>
-    <div class="title">
-    <span class="title">{{ thesis.title }}</span>
-    {% if thesis.fulltext %}
-        <a title="fulltext" href="{{ site.url }}/downloads/thesis/{{ thesis.fulltext }}"><i class="fa fa-file-pdf-o"></i></a>
-    {% endif %}
-    </div>
-    <div class='author'>
-    {% for author in thesis.author %}
-        <span class='{{ author.role }}'>{{ author.family }}, {{ author.given_initial }}</span>
+<div>
+    <ol>
+        {% for pub in site.data.thesis %}
+        <li>
+            <div>
+            <span>{{ pub.title }}</span>
+            {% if pub.fulltext %}
+                <a title="fulltext" href="{{ site.url }}/downloads/thesis/{{ pub.fulltext }}"><i class="fa fa-file-pdf-o"></i></a>
+            {% endif %}
+            </div>
+            <div>
+            {% for author in pub.author %}
+                <span>{{ author.family }}, {{ author.given_initial }}</span>
+            {% endfor %}
+            </div>
+            {% for advisor in pub.advisor %}
+                <span>{{ advisor.role }}: {{ advisor.family }}, {{ advisor.given_initial }}</span>
+            {% endfor %}
+            <div>
+                <span>{{ pub.source }} </span><span>{{ pub.publisher }}, </span><span>{{ pub.year }}.</span>
+            </div>
+        </li>
     {% endfor %}
-    </div>
-    {% for advisor in thesis.advisor %}
-        <span class='advisor'>{{ advisor.role }}: {{ advisor.family }}, {{ advisor.given_initial }}</span>
-    {% endfor %}
-    <div class="pubinfo">
-    <span class="source">{{ thesis.source }} </span><span class="publisher">{{ thesis.publisher }}, </span><span class="year">{{ thesis.year }}.</span>
-    </div>
-    </li>
-{% endfor %}
-</ol>
+    </ol>
 </div>
+
+{% endif %}

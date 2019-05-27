@@ -1,13 +1,14 @@
 ---
 layout: post
 title: Know your sources
-description: Presentation of a solution for the problem of source localization on graphs
-author: Rodrigo Pena
+description: A solution for a source localization problem on graphs
 date: 2018-03-09
 modified: 2018-03-12
 image:
-    feature:
-categories: [Inverse Problems, Graph Signal Processing]
+  feature:
+  credit:
+  creditlink:
+categories: [inverse problems, graph signal processing]
 tags: [l1-norm, graphs, spectrum, non-convex]
 ---
 

@@ -1,19 +1,10 @@
 # Menu navigation links
 
-# - title:    About
-#   url:      /about/
-
 - title:    Blog
   url:      /blog/
 
-# - title:    Research
-#   url:      /research/
-
-- title:    Talks / Publications
+- title:    Publications
   url:      /publications/
 
-- title:    Teaching
-  url:      /teaching/
-
-- title:    Code
-  url:      /code/
+- title:    Presentations
+  url:      /presentations/
