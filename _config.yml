@@ -2,30 +2,24 @@
 url: ''
 baseurl: ''
 
-# configuration
+# personal configuration
 owner:
-  # an avatar or logo (optional)
-  logo: "/images/me.png"
-  # author will appear under the avatar (optional)
-  author: "Rodrigo C. G. Pena"
-  description: "Ph.D. student at EPFL"
-  # tagline will appear under the title (optional)
-  tagline: "Researcher"
-  # if include_landing is true, a landing page will be generated
-  include_landing: true
-  # if include_analytics is true, the content of the analytics.html include will
-  # be added at the end of the <head> section. You can add your Google Analytics
-  # Tracking Code to that file.
-  include_analytics: false
-  # Twitter @username (as defined by the Twitter Card specs)
-  twitter: "gonzpen"
+  author: Rodrigo C. G. Pena # name under the avatar
+  description: Personal Website
+  email:
+    handle: rodrigocgp
+    provider: gmail.com
+  include_analytics: false # include analytics.html at the end of <head>
+  include_landing: true # generate landing page
+  logo: /images/me.png # (optional) an avatar or logo
+  tagline: Researcher # (optional) tagline under the title
 
 # exclude
 exclude: ["CNAME", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
 
-# Dependencies
+# dependencies
 markdown: kramdown
 highlighter: rouge
 
-# Permalinks
+# permalinks
 permalink: pretty

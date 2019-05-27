@@ -1,21 +1,31 @@
 # Documentation
 
-Compass is a Jekyll theme designed with something very specific in mind: to be a simple and elegant personal landing page that can be easily deployed to [GitHub Pages](https://pages.github.com/).
+Code for generating my [personal website][personal-website].
 
-## How to use Compass
+## How to use this repository as a template for your website
 
-1. Start by [installing Bundler](http://bundler.io) `gem install bundler`
-2. [Fork the Compass repository](https://github.com/excentris/compass/fork)
-3. Clone the repository you just forked: `git clone https://github.com/YOUR-USER/compass`
-4. Then run `bundle install` to get [Jekyll](http://jekyllrb.com) and all the dependencies.
-5. Edit `_config.yml` as needed.
-6. Run the Jekyll server with `bundle exec jekyll serve`
-7. Go to `http://localhost:4000`
+You can follow the instructions below if you want to adapt this repository's contents to deploy your own [GitHub Pages][github-pages] website.
 
-## Deploy your site to GitHub Pages
+1. [Fork][fork] this repository.
+2. Rename the repository you just forked to `YOUR-USER.github.io`, where `YOUR-USER` is your GitHub user name.
+3. Clone your renamed repository into your computer.
+4. Open a terminal window and navigate to the directory into which you cloned the repository.
+5. Install [Bundler][bundler] by typing with `gem install bundler`.
+6. Run `bundle install` to get [Jekyll](http://jekyllrb.com) and all the dependencies.
+7.  Edit `_config.yml` and `index.md` with your personal information.
+8.  Run the Jekyll server by typing `bundle exec jekyll serve --watch` into the terminal.
+9.  On your browser, go to `http://localhost:4000` and behold your new website.
 
-If you want to use Compass as your personal landing page you can deploy your site to GitHub Pages as a [User Page](https://help.github.com/articles/user-organization-and-project-pages/#user--organization-pages). To do so, when you are done modifying your clone, you should rename your repository to `username.github.io` where username is your username. When GitHub builds the page it will be made available at `https://username.github.io`.
+## Acknowledgements
 
-If you are planning on using a custom domain to direct to your site, modify the CNAME file as described [here](https://help.github.com/articles/adding-a-cname-file-to-your-repository/).
+I started building the layout of this website by modifying the [compass] template.
 
-Check the [GitHub Pages Basics](https://help.github.com/categories/github-pages-basics/) for more information.
+## License
+
+The content is released under the terms of the [MIT License](LICENSE.txt).
+
+[bundler]: http://bundler.io
+[compass]: https://github.com/excentris/compass
+[fork]: https://github.com/rodrigo-pena/rodrigo-pena.github.io/fork
+[github-pages]: https://pages.github.com/
+[personal-website]: https://rodrigo-pena.github.io/

@@ -18,7 +18,7 @@ main {
 
 /*** wrapper div for both header and main ***/
 .wrapper {
-	margin-top: 10%;
+	margin-top: 0%;
 }
 
 /*** anchor tags ***/
@@ -97,54 +97,59 @@ hr {
 
 /*** footer ***/
 footer {
-	position: fixed;
+	position: absolute;
 	bottom: 0;
-	right: 0;
-	height: 20px;
+	left: 0;
+	text-align: center;
+	width: 100%;
+	height: 2.5rem;
 }
 
 .poweredby {
-	font-family: "Arial Narrow", Arial;
-	font-size: 0.6em;
-	line-height: 0.6em;
-	padding: 0 5px;
+	font-family: 'Vollkorn', serif;
+	font-size: 0.8rem;
 }
 
 /*** media queries ***/
 /* X-Small devices (phones, 480px and up) */
 @media (min-width: 480px) {
-	/* wrapper stays 480px wide past 480px wide and is kept centered */
 	.wrapper {
 		width: 480px;
 		margin: 10% auto 0 auto;
+		position: relative;
+		min-height: 80vh;
+	}
+	main {
+		padding-bottom: 2.5rem;
 	}
 }
 
 /* All other devices (768px and up) */
 @media (min-width: 768px) {
-	/* past 768px the layout is changed and the wrapper has a fixed width of 680px
-	to accomodate both the header column and the content column */
 	.wrapper {
-		width: 680px;
+		width: 100%;
+		position: relative;
+		min-height: 80vh;
+		margin: 10% auto 0 auto;
 	}
 
 	/* the header column stays left and has a dynamic width with all contents
 	aligned right */
 	header {
 		float: left;
-		width: 46%;
-		text-align: right;
+		width: 40%;
+		text-align: center;
 	}
 
 	.author-container h1,
 	.logo-container,
 	.tagline-container p {
-		text-align: right;
+		text-align: center;
 	}
 
 	main {
-		width: 46%;
-		margin-left: 54%;
-		padding: 0;
+		width: 90%;
+		margin-right: 2.5rem;
+		padding-bottom: 2.5rem;
 	}
 }

@@ -1,29 +1,14 @@
 ---
 layout: base
+modified: 2019-05-27
 ---
 
-<div class="wrapper">
-    <header>
-        {% if site.owner.logo %}
-        <div class="logo-container">
-          <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}{{ site.owner.logo }}')"></a>
-        </div>
-        {% endif %}
+# About
 
-        {% if site.owner.author %}
-        <div class="author-container"><h1>{{ site.owner.author }}</h1></div>
-        {% endif %}
+I am currently a Ph.D student in Computer Science at [EPFL](https://people.epfl.ch/rodrigo.pena?lang=en), doing research on recovery algorithms for subsampled graph signals. My studies were mostly funded by the European Union’s *Marie Curie ITN [SpaRTaN][spartan]*.
 
-        {% if site.owner.tagline %}
-        <div class="tagline-container"><p>{{ site.owner.tagline }}</p></div>
-        {% endif %}
-    </header>
-    <main>
-      {% if site.owner.include_landing %}
-      <div class="content">
-        {% include landing.html %}
-      </div>
-      {% endif %}
-    </main>
-</div>
+I was born and raised on a [modernist island][brasilia] in the dry Brazilian highlands.
 
+
+[spartan]: http://www.spartan-itn.eu/#0
+[brasilia]: https://en.wikipedia.org/wiki/Bras%C3%ADlia
