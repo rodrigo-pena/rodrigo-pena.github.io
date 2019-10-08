@@ -46,7 +46,7 @@ since it must be aligned with the content */
   width: 256px;
   height: 256px;
   display: inline-block;
-  border-radius: 50%;
+  border-radius: 100%;
   -moz-border-radius: 50%;
   border: 2px solid #F1EED9;
   box-shadow: 0 0 0 3px #46433A;
