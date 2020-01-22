@@ -60,8 +60,8 @@ since it must be aligned with the content */
 }
 
 .logo {
-	width: 256px;
-	height: 256px;
+	width: 300px;
+	height: 300px;
 	display: inline-block;
 	border-radius: 100%;
 	-moz-border-radius: 50%;
@@ -69,7 +69,7 @@ since it must be aligned with the content */
 	box-shadow: 0 0 0 3px $text-color;
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-size: auto 256px;
+	background-size: auto 300px;
 }
 
 /*** author ***/
@@ -154,4 +154,5 @@ footer {
 		margin-right: 2.5rem;
 		padding-bottom: 2.5rem;
 	}
+
 }

@@ -15,7 +15,7 @@ owner:
   include_analytics: false # include analytics.html at the end of <head>
   include_landing: true # generate landing page
   logo: /images/me.png # (optional) an avatar or logo
-  tagline: Researcher # (optional) tagline under the title
+  tagline: Research Scientist # (optional) tagline under the title
 
 # analytics
 google_analytics: UA-115358555-1  # Analytics Property ID
