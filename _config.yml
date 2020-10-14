@@ -1,11 +1,11 @@
-# general configuration
-url: '' # base hostname & protocol of the site, e.g. http://example.com
-baseurl: ''
+# General configuration
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 reading_time: true
 words_per_minute: 200
 excerpt_separator: "<!--more-->"
 
-# personal configuration
+# Personal configuration
 owner:
   author: Rodrigo C. G. Pena # name under the avatar
   description: Personal Website
@@ -15,7 +15,7 @@ owner:
   include_analytics: false # include analytics.html at the end of <head>
   include_landing: true # generate landing page
   logo: /images/me.png # (optional) an avatar or logo
-  tagline: Research Scientist # (optional) tagline under the title
+  tagline: Data Scientist / Researcher in Machine Learning # (optional) tagline under the title
 
 # analytics
 google_analytics: UA-115358555-1  # Analytics Property ID
@@ -37,4 +37,15 @@ paginate: 5
 paginate_path: "blog/page:num/"
 
 # exclude
-exclude: ["CNAME", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+#exclude: ["CNAME", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
