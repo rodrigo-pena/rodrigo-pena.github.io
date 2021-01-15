@@ -11,9 +11,13 @@ body {
 	background-color: $background-color;
 }
 
-header,
+header {
+	padding: 0;
+	margin: 2.5rem;
+
+}
 main {
-	padding: 0 20px;
+	padding: 0 2%;
 }
 
 /*** wrapper div for both header and main ***/
@@ -40,7 +44,7 @@ a:hover {
 	font-weight: bold;
 	font-size: 1.2em;
 	margin: 0.8em 0;
-	display: inline;
+	display: inline list-item;
 	white-space: nowrap;
 }
 
@@ -106,7 +110,7 @@ hr {
 
 /*** footer ***/
 footer {
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	left: 0;
 	text-align: center;
@@ -128,8 +132,8 @@ footer {
 		position: relative;
 		min-height: 80vh;
 	}
-	main {
-		padding-bottom: 2.5rem;
+	header {
+		margin: 2.5rem;
 	}
 }
 
@@ -148,6 +152,10 @@ footer {
 		float: left;
 		width: 40%;
 		text-align: center;
+		margin-left: 2.5rem;
+		margin-right: 2.5rem;
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
 	}
 
 	.author-container h1,
@@ -157,9 +165,7 @@ footer {
 	}
 
 	main {
-		width: 90%;
-		margin-right: 2.5rem;
-		padding-bottom: 2.5rem;
+		width: 96%;
 	}
 
 }

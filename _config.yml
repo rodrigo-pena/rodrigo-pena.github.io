@@ -15,7 +15,7 @@ owner:
   include_analytics: false # include analytics.html at the end of <head>
   include_landing: true # generate landing page
   logo: /images/me.png # (optional) an avatar or logo
-  tagline: Data Scientist / Researcher in Machine Learning # (optional) tagline under the title
+  tagline: Data Analyst # (optional) tagline under the title
 
 # analytics
 google_analytics: UA-115358555-1  # Analytics Property ID
@@ -33,8 +33,6 @@ plugins:
   - jekyll-paginate
 
 permalink: /:year/:month/:title
-paginate: 5
-paginate_path: "blog/page:num/"
 
 # exclude
 #exclude: ["CNAME", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
