@@ -5,7 +5,7 @@ modified: 2021-09-22
 
 # Latest
 
-- I am a Data Analyst at [CeDa](https://ceda.unibas.ch/), the Center for Data Analytics at the University of Basel.
+- I am a Data Analyst at [CeDA](https://ceda.unibas.ch/), the Center for Data Analytics at the University of Basel.
 
 # About me
 
