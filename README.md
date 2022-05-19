@@ -11,10 +11,10 @@ You can follow the instructions below if you want to adapt this repository's con
 3. Clone your renamed repository into your computer.
 4. Open a terminal window and navigate to the directory into which you cloned the repository.
 5. Install [Bundler][bundler] by typing with `gem install bundler`.
-6. Run `bundle install` to get [Jekyll](http://jekyllrb.com) and all the dependencies.
-7.  Edit `_config.yml` and `index.md` with your personal information.
-8.  Run the Jekyll server by typing `bundle exec jekyll serve --watch` into the terminal.
-9.  On your browser, go to `http://localhost:4000` and behold your new website.
+6. (Delete Gemfile.lock if it exists and ) run `bundle install` to get [Jekyll](http://jekyllrb.com) and all the dependencies.
+7. Edit `_config.yml` and `index.md` with your personal information.
+8. Run the Jekyll server by typing `bundle exec jekyll serve --watch` into the terminal.
+9. On your browser, go to `http://localhost:4000` and behold your new website.
 
 ## Acknowledgements
 
