@@ -1,7 +1,7 @@
 # General configuration
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-reading_time: true
+reading_time: false
 words_per_minute: 200
 excerpt_separator: "<!--more-->"
 
@@ -15,7 +15,7 @@ owner:
   include_analytics: false # include analytics.html at the end of <head>
   include_landing: true # generate landing page
   logo: /images/me.png # (optional) an avatar or logo
-  tagline: Data Analyst # (optional) tagline under the title
+  tagline: (ʁoˈdɾiɡu ˈse ˈɡe ˈpɛnɐ) # (optional) tagline under the title
 
 # analytics
 google_analytics: UA-115358555-1  # Analytics Property ID
