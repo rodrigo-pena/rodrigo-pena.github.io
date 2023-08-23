@@ -1,6 +1,6 @@
 ---
 layout: base
-modified: 2022-05-23
+modified: 2022-08-23
 ---
 
 # Latest
@@ -17,7 +17,7 @@ modified: 2022-05-23
 
 - You can see my academic genealogy <a href="{{ site.baseurl }}/downloads/academic genealogy rodrigo c g pena.pdf">here</a>.
 
-- For more information, such as list of publications and code repositories, please check the links below.
+- For more information, such as list of publications and code repositories, please check the links in the icons below.
 
 - Feel free to send me an email.
 
