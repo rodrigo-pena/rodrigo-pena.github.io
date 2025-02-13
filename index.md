@@ -1,6 +1,6 @@
 ---
 layout: base
-modified: 2022-08-23
+modified: 2025-02-14
 ---
 
 # Latest
@@ -11,7 +11,7 @@ modified: 2022-08-23
 
 - I grew up in Brasília, the [planned, modernist capital][brasilia] in the dry Brazilian highlands.
 
-- I did my Ph.D. at the École Polytechnique Fédérale de Lausanne [(EPFL)][epfl], where I investigated recovery algorithms for subsampled graph signals. My thesis is freely available online in [this page](http://dx.doi.org/10.5075/epfl-thesis-7219).
+- I did my Ph.D. at the École Polytechnique Fédérale de Lausanne [(EPFL)][epfl], where I investigated recovery algorithms for subsampled graph signals. My thesis is freely available [here](http://dx.doi.org/10.5075/epfl-thesis-7219).
 
 - My doctoral studies were mostly funded by the European Union’s *Marie Curie ITN* [SpaRTaN][spartan].
 
