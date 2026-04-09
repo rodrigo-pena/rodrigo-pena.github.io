@@ -13,7 +13,7 @@ modified: 2025-02-14
 
 - I did my Ph.D. at the École Polytechnique Fédérale de Lausanne [(EPFL)][epfl], where I investigated recovery algorithms for subsampled graph signals. My thesis is freely available [here](http://dx.doi.org/10.5075/epfl-thesis-7219).
 
-- My doctoral studies were mostly funded by the European Union’s *Marie Curie ITN* [SpaRTaN][spartan].
+- My doctoral studies were mostly funded by the European Union's *Marie Curie ITN* [SpaRTaN][spartan].
 
 - You can see my academic genealogy <a href="{{ site.baseurl }}/downloads/academic genealogy rodrigo c g pena.pdf">here</a>.
 
