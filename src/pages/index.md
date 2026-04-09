@@ -12,10 +12,8 @@ modified: 2025-04-09
 - I grew up in Brasília, the [planned, modernist capital][brasilia] in the dry Brazilian highlands, and now live by the Rhine river in Switzerland.
 
 - I did my Ph.D. at the École Polytechnique Fédérale de Lausanne [(EPFL)][epfl], where I investigated recovery algorithms for subsampled graph signals. My thesis is freely available [here](http://dx.doi.org/10.5075/epfl-thesis-7219).
-
-    - My doctoral studies were mostly funded by the European Union's *Marie Curie ITN* [SpaRTaN][spartan].
-
-    - You can see my academic genealogy <a href="/downloads/academic%20genealogy%20rodrigo%20c%20g%20pena.pdf">here</a>.
+  - My doctoral studies were mostly funded by the European Union's *Marie Curie ITN* [SpaRTaN][spartan].
+  - You can see my academic genealogy <a href="/downloads/academic%20genealogy%20rodrigo%20c%20g%20pena.pdf">here</a>.
 
 - For more information, such as list of publications and code repositories, please check the links in the icons below.
 
