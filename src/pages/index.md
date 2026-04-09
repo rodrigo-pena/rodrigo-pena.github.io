@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: ../layouts/BaseLayout.astro
 modified: 2025-02-14
 ---
 
@@ -15,7 +15,7 @@ modified: 2025-02-14
 
     - My doctoral studies were mostly funded by the European Union's *Marie Curie ITN* [SpaRTaN][spartan].
 
-    - You can see my academic genealogy <a href="{{ site.baseurl }}/downloads/academic genealogy rodrigo c g pena.pdf">here</a>.
+    - You can see my academic genealogy <a href="/downloads/academic%20genealogy%20rodrigo%20c%20g%20pena.pdf">here</a>.
 
 - For more information, such as list of publications and code repositories, please check the links in the icons below.
 

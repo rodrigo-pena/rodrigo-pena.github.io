@@ -1,0 +1,79 @@
+---
+import Head from "../components/Head.astro";
+import { siteConfig } from "../site.config";
+
+type Props = {
+  frontmatter?: {
+    modified?: string | Date;
+    title?: string;
+    description?: string;
+  };
+  modified?: string | Date;
+  title?: string;
+  description?: string;
+};
+
+const frontmatter = Astro.props.frontmatter ?? {};
+const modifiedValue = Astro.props.modified ?? frontmatter.modified;
+const title = Astro.props.title ?? frontmatter.title;
+const description = Astro.props.description ?? frontmatter.description;
+
+const emailAddress = `${siteConfig.owner.email.handle}@${siteConfig.owner.email.provider}`;
+
+const modifiedDate = modifiedValue ? new Date(modifiedValue) : null;
+
+const modifiedLabel =
+  modifiedDate && !Number.isNaN(modifiedDate.getTime())
+    ? modifiedDate.toLocaleDateString("en-US", {
+        month: "long",
+        day: "2-digit",
+        year: "numeric"
+      })
+    : null;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <Head title={title} description={description} />
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="logo-container">
+          <a class="logo" href="/" style={`background-image: url('${siteConfig.owner.logo}')`}></a>
+        </div>
+
+        <div class="author-container"><h1>{siteConfig.owner.author}</h1></div>
+
+        <div class="tagline-container"><p>{siteConfig.owner.tagline}</p></div>
+      </header>
+
+      <main>
+        <div class="content">
+          <slot />
+        </div>
+
+        <ul class="fa-ul main-list">
+          <li class="main-list-item">
+            <a href={`mailto:${emailAddress}`} aria-label="Email">
+              <i class="fa fa-envelope fa-lg main-list-item-icon"></i>
+            </a>
+          </li>
+
+          {siteConfig.socialLinks.map((link) => (
+            <li class="main-list-item">
+              <a href={link.href} aria-label={link.label}>
+                <i class={link.iconClass}></i>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </main>
+
+      {modifiedLabel && (
+        <footer class="poweredby">
+          <p>(Page updated on {modifiedLabel})</p>
+        </footer>
+      )}
+    </div>
+  </body>
+</html>
