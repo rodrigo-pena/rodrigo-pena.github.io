@@ -8,11 +8,12 @@ Code for generating my [personal website][personal-website]. The generated websi
 2. Rename the repository you just forked to `YOUR-USER.github.io`, where `YOUR-USER` is your GitHub user name.
 3. Clone your renamed repository into your computer.
 4. Open a terminal window and navigate to the directory into which you cloned the repository.
-5. Install the latest stable version of [ruby](https://www.ruby-lang.org/en/documentation/installation/) on your system.
-6. Install [Bundler][bundler] by typing with `gem install bundler`.
-7. (Delete Gemfile.lock if it exists and ) run `bundle install` to get [Jekyll](http://jekyllrb.com) and all the dependencies.
+5. Install a [Ruby 3.x](https://www.ruby-lang.org/en/documentation/installation/) version, for example Ruby 3.3, on your system
+   ([rbenv](https://github.com/rbenv/rbenv#readme) is a good option for managing multiple Ruby versions on the same system).
+6. Install [Bundler][bundler] by typing `gem install bundler -v 2.4.19`.
+7. Run `bundle install` to get [Jekyll](http://jekyllrb.com) and all the dependencies.
 8. Edit `_config.yml` and `index.md` with your personal information.
-9. Run the Jekyll server by typing `bundle exec jekyll serve --watch` into the terminal.
+9.  Run the Jekyll server by typing `bundle exec jekyll serve --watch` into the terminal.
 10. On your browser, go to `http://localhost:4000` and behold your new website.
 
 ## Acknowledgements
