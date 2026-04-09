@@ -39,7 +39,11 @@ const modifiedLabel =
     <div class="wrapper">
       <header>
         <div class="logo-container">
-          <a class="logo" href="/" style={`background-image: url('${siteConfig.owner.logo}')`}></a>
+          <a
+            class="logo"
+            href="/"
+            aria-label={`${siteConfig.owner.author} homepage`}
+            style={`background-image: url('${siteConfig.owner.logo}')`}></a>
         </div>
 
         <div class="author-container"><h1>{siteConfig.owner.author}</h1></div>
