@@ -1,0 +1,57 @@
+---
+import { siteConfig } from "../site.config";
+
+type Props = {
+  title?: string;
+  description?: string;
+  canonicalPath?: string;
+  noIndex?: boolean;
+};
+
+const {
+  title,
+  description = siteConfig.owner.tagline,
+  canonicalPath,
+  noIndex = false
+} = Astro.props;
+
+const resolvedTitle = title
+  ? `${title} • ${siteConfig.owner.tagline}`
+  : `${siteConfig.owner.author} • ${siteConfig.owner.tagline}`;
+
+const pathname = canonicalPath ?? Astro.url.pathname;
+const canonicalUrl = new URL(pathname, siteConfig.siteUrl).toString();
+const ogImageUrl = new URL(siteConfig.owner.logo, siteConfig.siteUrl).toString();
+---
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{resolvedTitle}</title>
+
+  <link rel="apple-touch-icon" href={siteConfig.owner.logo} />
+  <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="/favicon.ico" />
+
+  <link rel="stylesheet" href="/assets/normalize.css" />
+  <link rel="stylesheet" href="/assets/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/assets/academicons/css/academicons.min.css" />
+  <link rel="stylesheet" href="/assets/fontawesome/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="/assets/fontawesome/css/brands.min.css" />
+  <link rel="stylesheet" href="/assets/fontawesome/css/solid.min.css" />
+
+  <link rel="canonical" href={canonicalUrl} />
+
+  <meta name="author" content={siteConfig.owner.author} />
+  <meta name="description" content={description} />
+  {siteConfig.googleVerify && <meta name="google-site-verification" content={siteConfig.googleVerify} />}
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={siteConfig.owner.tagline} />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:image" content={ogImageUrl} />
+  <meta property="og:description" content={siteConfig.owner.description} />
+  <meta property="og:site_name" content={siteConfig.owner.tagline} />
+
+  {noIndex && <meta name="robots" content="noindex" />}
+</head>
