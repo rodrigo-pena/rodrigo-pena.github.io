@@ -58,6 +58,23 @@ a:hover {
 	margin-bottom: 0;
 }
 
+.content .text-group {
+	background-color: rgba(255, 255, 255, 0.26);
+	border: 1px solid rgba(70, 67, 58, 0.18);
+	border-left: 3px solid rgba(70, 67, 58, 0.42);
+	border-radius: 6px;
+	padding: 1rem 1.25rem;
+	margin: 1.25rem 0;
+}
+
+.content .text-group > :first-child {
+	margin-top: 0;
+}
+
+.content .text-group > :last-child {
+	margin-bottom: 0;
+}
+
 
 /*** main content list ***/
 .main-list-item {
