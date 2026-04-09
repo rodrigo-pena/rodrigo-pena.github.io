@@ -10,8 +10,8 @@ owner:
   author: Rodrigo C. G. Pena # name under the avatar
   description: Personal Website
   email:
-    handle: rodrigocgp
-    provider: gmail.com
+    handle: rcgp
+    provider: proton.me
   include_analytics: false # include analytics.html at the end of <head>
   include_landing: true # generate landing page
   logo: /images/me.png # (optional) an avatar or logo
