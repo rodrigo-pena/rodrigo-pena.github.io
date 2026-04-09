@@ -23,6 +23,6 @@ Feel free to send me an email.
 
 <!-- Links -->
 
-[spartan]: http://www.spartan-itn.eu/#0
+[spartan]: https://www.cvssp.org/ITN/SpaRTaN/#0
 [brasilia]: https://en.wikipedia.org/wiki/Bras%C3%ADlia
 [epfl]: https://www.epfl.ch/en/
