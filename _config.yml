@@ -35,7 +35,6 @@ plugins:
 permalink: /:year/:month/:title
 
 # exclude
-#exclude: ["CNAME", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
 exclude:
   - .sass-cache/
   - .jekyll-cache/
