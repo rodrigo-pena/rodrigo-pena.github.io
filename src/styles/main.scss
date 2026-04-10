@@ -14,7 +14,7 @@ header {
 
 }
 main {
-	padding: 0 2%;
+	padding: 0;
 }
 
 /*** wrapper div for both header and main ***/
@@ -174,13 +174,13 @@ footer {
 	}
 }
 
-/* All other devices (768px and up) */
-@media (min-width: 800px) {
+/* All other devices (1000px and up) */
+@media (min-width: 1000px) {
 	.wrapper {
 		width: 100%;
 		position: relative;
 		min-height: 80vh;
-		margin: 10% auto 0 auto;
+		margin: 10% auto 10% auto;
 	}
 
 	/* the header column stays left and has a dynamic width with all contents
@@ -190,9 +190,9 @@ footer {
 		width: 40%;
 		text-align: center;
 		margin-left: 2.5rem;
-		margin-right: 2.5rem;
-		margin-top: 0.5rem;
-		margin-bottom: 0.5rem;
+		margin-right: 0rem;
+		margin-top: 0rem;
+		margin-bottom: 0rem;
 	}
 
 	.author-container h1,
@@ -202,7 +202,13 @@ footer {
 	}
 
 	main {
-		width: 96%;
+		float: right;
+		width: 50%;
+		margin-right: 2.5rem;
+	}
+
+	footer {
+		float: bottom;
 	}
 
 }
