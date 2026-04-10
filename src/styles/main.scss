@@ -108,8 +108,9 @@ since it must be aligned with the content */
 }
 
 .logo {
-	width: 300px;
-	height: 300px;
+	/*            min, fluid, max */
+	width: clamp(200px, 30vw, 400px);
+	height: clamp(200px, 30vw, 400px);
 	display: inline-block;
 	border-radius: 100%;
 	-moz-border-radius: 50%;
@@ -117,7 +118,7 @@ since it must be aligned with the content */
 	box-shadow: 0 0 0 3px $text-color;
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-size: auto 300px;
+	background-size: clamp(200px, 30vw, 400px) clamp(200px, 30vw, 400px);
 }
 
 /*** author ***/
@@ -172,10 +173,11 @@ footer {
 	.author-container h1 {
 		font-size: 2.3em;
 	}
-	.logo {
-		width: 200px;
-		height: 200px;
-	}
+	// .logo {
+	// 	/* min, fluid, max */
+	// 	width: clamp(200px, 45vw, 300px);
+	// 	height: clamp(200px, 45vw, 300px);
+	// }
 	header {
 		margin: 2.5rem 0;
 	}
