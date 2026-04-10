@@ -13,11 +13,10 @@ export const siteConfig = {
       handle: "rcgp",
       provider: "proton.me"
     },
-    includeAnalytics: false,
     logo: "/images/me.png",
     tagline: "(ʁoˈdɾiɡu ˈse ˈɡe ˈpɛnɐ)"
   },
-  googleAnalytics: "UA-115358555-1",
+  // For Google Search Console verification
   googleVerify: "Z1RJE6QhVYyI4ypHTDgE1oOIt_VPwNrwgxUK7wv1f38",
   socialLinks: [
     {
