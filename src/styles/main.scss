@@ -179,15 +179,23 @@ footer {
 	.wrapper {
 		width: 100%;
 		position: relative;
-		min-height: 80vh;
-		margin: 10% auto 10% auto;
+		min-height: 100vh;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 40% 50%;
+		justify-content: center;
+		align-content: center;
+		grid-template-areas:
+			"header main"
+			"footer footer";
 	}
 
 	/* the header column stays left and has a dynamic width with all contents
 	aligned right */
 	header {
-		float: left;
-		width: 40%;
+		grid-area: header;
+		float: none;
+		width: auto;
 		text-align: center;
 		margin-left: 2.5rem;
 		margin-right: 0rem;
@@ -202,13 +210,15 @@ footer {
 	}
 
 	main {
-		float: right;
-		width: 50%;
+		grid-area: main;
+		float: none;
+		width: auto;
 		margin-right: 2.5rem;
 	}
 
 	footer {
-		float: bottom;
+		grid-area: footer;
+		float: none;
 	}
 
 }
