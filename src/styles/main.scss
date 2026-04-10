@@ -161,20 +161,24 @@ footer {
 }
 
 /*** media queries ***/
-/* X-Small devices (phones, 480px and up) */
-@media (min-width: 480px) {
+/* Small devices */
+@media (max-width: 1000px) {
 	.wrapper {
-		width: 480px;
-		margin: 10% auto 0 auto;
+		width: 320px;
+		margin: auto;
 		position: relative;
-		min-height: 80vh;
+		min-height: 100vh;
+	}
+	.logo {
+		width: 200px;
+		height: 200px;
 	}
 	header {
-		margin: 2.5rem;
+		margin: 2.5rem 0;
 	}
 }
 
-/* All other devices (1000px and up) */
+/* All other devices */
 @media (min-width: 1000px) {
 	.wrapper {
 		width: 100%;
