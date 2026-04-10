@@ -164,7 +164,7 @@ footer {
 /* Small devices */
 @media (max-width: 1000px) {
 	.wrapper {
-		width: 320px;
+		width: auto;
 		margin: auto;
 		position: relative;
 		min-height: 100vh;
@@ -178,6 +178,10 @@ footer {
 	}
 	header {
 		margin: 2.5rem 0;
+	}
+	main {
+		width: auto;
+		margin: 0 2.5rem
 	}
 }
 
