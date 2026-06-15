@@ -6,7 +6,7 @@ import PageLayout from "../layouts/PageLayout.astro";
     <style type="text/css" media="screen">
         .not-found {
             margin: 0 auto;
-            max-width: 38rem;
+            max-width: 42rem;
             text-align: center;
         }
 
@@ -25,7 +25,7 @@ import PageLayout from "../layouts/PageLayout.astro";
         .not-found-figure {
             color: inherit;
             display: block;
-            width: min(100%, 34rem);
+            width: min(100%, 38rem);
             height: auto;
             margin: 0 auto 1.5rem;
         }
@@ -56,6 +56,31 @@ import PageLayout from "../layouts/PageLayout.astro";
 
         .not-found p {
             margin: 0.5rem 0;
+        }
+
+        @media (max-width: 999px) {
+            :global(.wrapper > main) {
+                margin-right: 1.5rem;
+                margin-left: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1000px) {
+            :global(.wrapper) {
+                grid-template-columns: minmax(0, 1fr);
+                grid-template-areas:
+                    "main"
+                    "footer";
+            }
+
+            :global(.wrapper > header) {
+                display: none;
+            }
+
+            :global(.wrapper > main) {
+                margin-right: 2.5rem;
+                margin-left: 2.5rem;
+            }
         }
     </style>
 

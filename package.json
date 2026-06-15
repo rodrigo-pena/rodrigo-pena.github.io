@@ -19,5 +19,9 @@
   },
   "engines": {
     "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "@playwright/cli": "^0.1.14",
+    "@playwright/test": "^1.60.0"
   }
 }
