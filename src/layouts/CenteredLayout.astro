@@ -1,0 +1,88 @@
+---
+import Head from "../components/Head.astro";
+
+type Props = {
+  frontmatter?: {
+    title?: string;
+    description?: string;
+    modified?: string | Date;
+    canonicalPath?: string;
+    noIndex?: boolean;
+  };
+  title?: string;
+  description?: string;
+  modified?: string | Date;
+  canonicalPath?: string;
+  noIndex?: boolean;
+};
+
+const frontmatter = Astro.props.frontmatter ?? {};
+const title = Astro.props.title ?? frontmatter.title;
+const description = Astro.props.description ?? frontmatter.description;
+const modifiedValue = Astro.props.modified ?? frontmatter.modified;
+const canonicalPath = Astro.props.canonicalPath ?? frontmatter.canonicalPath;
+const noIndex = Astro.props.noIndex ?? frontmatter.noIndex;
+
+const modifiedDate = modifiedValue ? new Date(modifiedValue) : null;
+
+const modifiedLabel =
+  modifiedDate && !Number.isNaN(modifiedDate.getTime())
+    ? modifiedDate.toLocaleDateString("en-US", {
+        month: "long",
+        day: "2-digit",
+        year: "numeric"
+      })
+    : null;
+---
+
+<style is:global>
+  @media (max-width: 999px) {
+    .wrapper > main {
+      margin-right: 1.5rem;
+      margin-left: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .wrapper {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-areas:
+        "main"
+        "footer";
+    }
+
+    .wrapper > header {
+      display: none;
+    }
+
+    .wrapper > main {
+      margin-right: 2.5rem;
+      margin-left: 2.5rem;
+    }
+  }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+  <Head title={title} description={description} canonicalPath={canonicalPath} noIndex={noIndex} />
+  <body>
+    <div class="wrapper">
+      <header>
+        {title && <div class="author-container"><h1>{title}</h1></div>}
+        {description && <div class="tagline-container"><h1>{description}</h1></div>}
+      </header>
+
+      <main>
+        <div class="content">
+          <slot />
+        </div>
+      </main>
+
+      {modifiedLabel && (
+        <footer class="poweredby">
+          <p>Updated on {modifiedLabel}</p>
+        </footer>
+      )}
+    </div>
+  </body>
+</html>
