@@ -4,25 +4,259 @@ import PageLayout from "../layouts/PageLayout.astro";
 
 <PageLayout canonicalPath="/404.html" noIndex={true}>
     <style type="text/css" media="screen">
-        .container {
-            margin: 10px auto;
-            max-width: 600px;
+        .not-found {
+            margin: 0 auto;
+            max-width: 38rem;
             text-align: center;
         }
 
-        .container h1 {
-            margin: 30px 0;
-            font-size: 4em;
+        .not-found-title {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .not-found-figure {
+            color: inherit;
+            display: block;
+            width: min(100%, 34rem);
+            height: auto;
+            margin: 0 auto 1.5rem;
+        }
+
+        .not-found-figure :global(.wireframe-edge) {
+            fill: none;
+            stroke: currentColor;
+            stroke-linecap: round;
+        }
+
+        .not-found-figure :global(.wireframe-vertex) {
+            fill: currentColor;
+        }
+
+        .not-found-figure .wireframe-fallback {
+            fill: currentColor;
+            font-family: "Vollkorn", serif;
+            font-size: 10rem;
+            font-weight: 700;
             line-height: 1;
-            letter-spacing: -1px;
+            letter-spacing: 0;
+            opacity: 0.9;
+        }
+
+        .not-found-figure[data-ready="true"] .wireframe-fallback {
+            display: none;
+        }
+
+        .not-found p {
+            margin: 0.5rem 0;
         }
     </style>
 
-    <div class="container">
-        <h1>404</h1>
+    <div class="not-found">
+        <h1 class="not-found-title">404</h1>
+
+        <svg
+            class="not-found-figure"
+            data-wireframe-404
+            viewBox="0 0 640 420"
+            aria-hidden="true"
+            focusable="false">
+            <text class="wireframe-fallback" x="320" y="275" text-anchor="middle">404</text>
+        </svg>
+
         <p>Hey, buddy, this page doesn't exist.</p>
         <p>
             Wanna go back <a href="/">home</a>?
         </p>
     </div>
+
+    <script is:inline>
+        (() => {
+            const svg = document.querySelector("[data-wireframe-404]");
+            if (!svg) {
+                return;
+            }
+
+            const namespace = "http://www.w3.org/2000/svg";
+            const center = { x: 320, y: 220 };
+            const scale = 0.82;
+            const camera = 560;
+            const depth = 36;
+            const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+            let animationFrame = 0;
+
+            const createSvgElement = (name, className) => {
+                const element = document.createElementNS(namespace, name);
+                element.setAttribute("class", className);
+                svg.appendChild(element);
+                return element;
+            };
+
+            const addSegment = (segments, start, end) => {
+                segments.push({
+                    start: [start[0], start[1], -depth],
+                    end: [end[0], end[1], -depth]
+                });
+                segments.push({
+                    start: [start[0], start[1], depth],
+                    end: [end[0], end[1], depth]
+                });
+                segments.push({
+                    start: [start[0], start[1], -depth],
+                    end: [start[0], start[1], depth]
+                });
+                segments.push({
+                    start: [end[0], end[1], -depth],
+                    end: [end[0], end[1], depth]
+                });
+            };
+
+            const buildFour = (offsetX) => [
+                [[offsetX - 44, 18], [offsetX + 38, -88]],
+                [[offsetX - 44, 18], [offsetX + 54, 18]],
+                [[offsetX + 38, -88], [offsetX + 38, 94]]
+            ];
+
+            const buildZero = (offsetX) => {
+                const points = [];
+                const radiusX = 56;
+                const radiusY = 92;
+                const sides = 14;
+
+                for (let index = 0; index < sides; index += 1) {
+                    const angle = (Math.PI * 2 * index) / sides;
+                    points.push([
+                        offsetX + Math.cos(angle) * radiusX,
+                        Math.sin(angle) * radiusY
+                    ]);
+                }
+
+                return points.map((point, index) => [point, points[(index + 1) % points.length]]);
+            };
+
+            const glyphSegments = [
+                ...buildFour(-188),
+                ...buildZero(0),
+                ...buildFour(188)
+            ];
+
+            const segments = [];
+            glyphSegments.forEach(([start, end]) => addSegment(segments, start, end));
+
+            const vertexKeys = new Set();
+            segments.forEach(({ start, end }) => {
+                vertexKeys.add(start.join(","));
+                vertexKeys.add(end.join(","));
+            });
+
+            const vertices = [...vertexKeys].map((key) => key.split(",").map(Number));
+            const edges = segments.map(() => createSvgElement("line", "wireframe-edge"));
+            const points = vertices.map(() => createSvgElement("circle", "wireframe-vertex"));
+
+            const rotate = ([x, y, z], time) => {
+                const ySpin = time * 0.00058;
+                const xTilt = Math.sin(time * 0.00024) * 0.18 + 0.36;
+                const zDrift = time * 0.00018;
+
+                const cosY = Math.cos(ySpin);
+                const sinY = Math.sin(ySpin);
+                const cosX = Math.cos(xTilt);
+                const sinX = Math.sin(xTilt);
+                const cosZ = Math.cos(zDrift);
+                const sinZ = Math.sin(zDrift);
+
+                const yRotatedX = x * cosY - z * sinY;
+                const yRotatedZ = x * sinY + z * cosY;
+                const xRotatedY = y * cosX - yRotatedZ * sinX;
+                const xRotatedZ = y * sinX + yRotatedZ * cosX;
+
+                return [
+                    yRotatedX * cosZ - xRotatedY * sinZ,
+                    yRotatedX * sinZ + xRotatedY * cosZ,
+                    xRotatedZ
+                ];
+            };
+
+            const project = (point) => {
+                const [x, y, z] = point;
+                const perspective = camera / (camera - z);
+
+                return {
+                    x: center.x + x * scale * perspective,
+                    y: center.y + y * scale * perspective,
+                    z,
+                    perspective
+                };
+            };
+
+            const depthStyle = (z) => {
+                const normalized = Math.max(0, Math.min(1, (z + 140) / 280));
+
+                return {
+                    opacity: 0.32 + normalized * 0.68,
+                    strokeWidth: 1.1 + normalized * 1.7,
+                    radius: 1.9 + normalized * 1.4
+                };
+            };
+
+            const draw = (time) => {
+                const projectedVertices = new Map(
+                    vertices.map((vertex) => [vertex.join(","), project(rotate(vertex, time))])
+                );
+
+                segments.forEach(({ start, end }, index) => {
+                    const line = edges[index];
+                    const startPoint = projectedVertices.get(start.join(","));
+                    const endPoint = projectedVertices.get(end.join(","));
+                    const style = depthStyle((startPoint.z + endPoint.z) / 2);
+
+                    line.setAttribute("x1", startPoint.x);
+                    line.setAttribute("y1", startPoint.y);
+                    line.setAttribute("x2", endPoint.x);
+                    line.setAttribute("y2", endPoint.y);
+                    line.setAttribute("stroke-width", style.strokeWidth);
+                    line.setAttribute("opacity", style.opacity);
+                });
+
+                vertices.forEach((vertex, index) => {
+                    const circle = points[index];
+                    const point = projectedVertices.get(vertex.join(","));
+                    const style = depthStyle(point.z);
+
+                    circle.setAttribute("cx", point.x);
+                    circle.setAttribute("cy", point.y);
+                    circle.setAttribute("r", style.radius * point.perspective);
+                    circle.setAttribute("opacity", style.opacity);
+                });
+            };
+
+            const animate = (time) => {
+                draw(time);
+                animationFrame = window.requestAnimationFrame(animate);
+            };
+
+            const start = () => {
+                window.cancelAnimationFrame(animationFrame);
+
+                if (reducedMotionQuery.matches) {
+                    draw(1400);
+                    return;
+                }
+
+                animationFrame = window.requestAnimationFrame(animate);
+            };
+
+            svg.setAttribute("data-ready", "true");
+            start();
+
+            reducedMotionQuery.addEventListener("change", start);
+        })();
+    </script>
 </PageLayout>
