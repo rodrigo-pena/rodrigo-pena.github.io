@@ -24,6 +24,8 @@ $logo-size: clamp(200px, 30vw, 400px);
 	--space-inner: 1.25rem;
 	--space-lg: 1.5rem;
 	--space-xl: 2.5rem;
+	--transition-fast: 150ms ease;
+	--transition-medium: 250ms ease;
 }
 
 body {
@@ -32,6 +34,12 @@ body {
 	line-height: var(--line-normal);
 	color: $text-color;
 	background-color: $background-color;
+	caret-color: $anchor-text-color;
+}
+
+::selection {
+	color: $background-color;
+	background-color: $anchor-text-color;
 }
 
 header,
@@ -60,9 +68,15 @@ a {
 	text-decoration: underline;
 	text-decoration-thickness: 0.08em;
 	text-underline-offset: 0.16em;
+	transition:
+		text-decoration-thickness var(--transition-fast),
+		text-underline-offset var(--transition-fast),
+		color var(--transition-fast),
+		outline-offset var(--transition-fast);
 
 	&:hover {
 		text-decoration-thickness: 0.14em;
+		text-underline-offset: 0.2em;
 	}
 
 	&:focus-visible {
@@ -114,6 +128,11 @@ a {
 		border-radius: 6px;
 		padding: var(--space-md) var(--space-inner);
 		margin: var(--space-inner) 0;
+		transition: border-left-color var(--transition-fast);
+	}
+
+	.text-group:focus-within {
+		border-left-color: $text-color;
 	}
 
 	.text-group > :first-child {
@@ -186,6 +205,18 @@ a {
 	border: 2px solid $background-color;
 	box-shadow: 0 0 0 3px $text-color;
 	text-decoration: none;
+	transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+
+	&:hover,
+	&:focus-visible {
+		transform: scale(1.02);
+		box-shadow: 0 0 0 4px $text-color;
+	}
+
+	&:focus-visible {
+		outline: 2px solid $anchor-text-color;
+		outline-offset: 4px;
+	}
 }
 
 .logo img {
