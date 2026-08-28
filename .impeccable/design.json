@@ -1,6 +1,6 @@
 {
     "schemaVersion": 2,
-    "generatedAt": "2026-08-28T08:59:10Z",
+    "generatedAt": "2026-08-28T09:50:49Z",
     "title": "Design System: Rodrigo C. G. Pena Personal Website",
     "extensions": {
         "colorMeta": {
@@ -159,9 +159,9 @@
             "name": "Profile Navigation",
             "kind": "nav",
             "refersTo": "profile-link",
-            "description": "Two compact rows of visible work, contact, and profile destinations.",
+            "description": "Two compact rows of visible work, contact, and profile destinations with 44px minimum hit areas.",
             "html": "<nav class=\"ds-profile-nav\" aria-labelledby=\"ds-profile-title\"><h2 id=\"ds-profile-title\">Links &amp; contact</h2><ul class=\"ds-profile-primary\"><li><a href=\"#\">Projects</a></li><li><a href=\"#\">Publications</a></li><li><a href=\"#\">Code</a></li><li><a href=\"#\">Email</a></li></ul><p>More profiles</p><ul class=\"ds-profile-secondary\"><li><a href=\"#\">GitLab</a></li><li><a href=\"#\">ORCID</a></li><li><a href=\"#\">Zenodo</a></li></ul></nav>",
-            "css": ".ds-profile-nav { color: #46433A; font-family: \"Vollkorn\", serif; } .ds-profile-nav h2 { margin: 0 0 0.55rem; font-size: 2em; } .ds-profile-nav ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin: 0; padding: 0; list-style: none; } .ds-profile-nav p { margin: 1rem 0 0.15rem; font-size: 0.8rem; } .ds-profile-primary { font-size: 1rem; font-weight: 700; } .ds-profile-secondary { font-size: 0.8rem; } .ds-profile-nav a { display: inline-block; color: #B34741; padding: 0.35rem 0; text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.16em; } .ds-profile-nav a:hover { text-decoration-thickness: 0.14em; } .ds-profile-nav a:focus-visible { outline: 2px solid #B34741; outline-offset: 3px; }"
+            "css": ".ds-profile-nav { color: #46433A; font-family: \"Vollkorn\", serif; } .ds-profile-nav h2 { margin: 0 0 0.55rem; font-size: 2em; } .ds-profile-nav ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin: 0; padding: 0; list-style: none; } .ds-profile-nav p { margin: 1rem 0 0.15rem; font-size: 0.8rem; } .ds-profile-primary { font-size: 1rem; font-weight: 700; } .ds-profile-secondary { font-size: 0.8rem; } .ds-profile-nav a { display: inline-flex; box-sizing: border-box; align-items: center; min-width: 44px; min-height: 44px; color: #B34741; padding: 0.35rem 0; text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.16em; } .ds-profile-nav a:hover { text-decoration-thickness: 0.14em; } .ds-profile-nav a:focus-visible { outline: 2px solid #B34741; outline-offset: 3px; }"
         },
         {
             "name": "Fading Divider",

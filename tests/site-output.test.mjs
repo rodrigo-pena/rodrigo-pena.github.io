@@ -78,3 +78,13 @@ test("keeps normal-size link text above WCAG AA contrast", () => {
   );
   assert.match(stylesheet, /a\s*\{[^}]*text-decoration:\s*underline/s);
 });
+
+test("gives profile navigation links a 44px minimum target", () => {
+  const profileLinkRule = stylesheet.match(
+    /\.profile-link-list a\s*\{(?<declarations>[^}]*)\}/
+  )?.groups?.declarations;
+
+  assert.ok(profileLinkRule, "expected a profile-link rule");
+  assert.match(profileLinkRule, /min-width:\s*44px/);
+  assert.match(profileLinkRule, /min-height:\s*44px/);
+});

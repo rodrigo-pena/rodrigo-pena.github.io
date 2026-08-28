@@ -57,6 +57,7 @@ components:
     profile-link:
         textColor: "{colors.terracotta-signal}"
         typography: "{typography.body}"
+        targetSize: "44px"
 ---
 
 # Design System: Rodrigo C. G. Pena Personal Website
@@ -172,7 +173,7 @@ The form language is restrained and purposeful. Biography panels use a modest 6p
 - **Style:** Compact, left-aligned rows of visibly named links with no surrounding container.
 - **Hierarchy:** Projects, Publications, Code, and Email form the bold primary row; GitLab, ORCID, Zenodo, LinkedIn, and Mastodon form a smaller secondary row under “More profiles.”
 - **Color:** Terracotta Signal with a persistent underline.
-- **Spacing:** Flexible wrapping with a `1rem` horizontal gap preserves comfortable scanning at narrow widths.
+- **Spacing:** Flexible wrapping with a `1rem` horizontal gap preserves comfortable scanning at narrow widths; every link keeps an invisible `44px × 44px` minimum hit area without becoming a button-like surface.
 - **Accessibility:** Link text names every destination directly; the order follows the visitor's likely path from work to contact to secondary profiles.
 
 ### Dividers and Metadata
