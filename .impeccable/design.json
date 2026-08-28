@@ -1,0 +1,228 @@
+{
+    "schemaVersion": 2,
+    "generatedAt": "2026-08-28T09:50:49Z",
+    "title": "Design System: Rodrigo C. G. Pena Personal Website",
+    "extensions": {
+        "colorMeta": {
+            "terracotta-signal": {
+                "role": "primary",
+                "displayName": "Terracotta Signal",
+                "canonical": "#B34741",
+                "tonalRamp": [
+                    "oklch(15% 0.142 26.09)",
+                    "oklch(26.5% 0.142 26.09)",
+                    "oklch(38% 0.142 26.09)",
+                    "oklch(49.5% 0.142 26.09)",
+                    "oklch(61% 0.142 26.09)",
+                    "oklch(72.5% 0.142 26.09)",
+                    "oklch(84% 0.142 26.09)",
+                    "oklch(95% 0.142 26.09)"
+                ]
+            },
+            "archive-paper": {
+                "role": "neutral",
+                "displayName": "Archive Paper",
+                "canonical": "#F1EED9",
+                "tonalRamp": [
+                    "oklch(15% 0.028 100.27)",
+                    "oklch(26.5% 0.028 100.27)",
+                    "oklch(38% 0.028 100.27)",
+                    "oklch(49.5% 0.028 100.27)",
+                    "oklch(61% 0.028 100.27)",
+                    "oklch(72.5% 0.028 100.27)",
+                    "oklch(84% 0.028 100.27)",
+                    "oklch(95% 0.028 100.27)"
+                ]
+            },
+            "graphite-umber": {
+                "role": "neutral",
+                "displayName": "Graphite Umber",
+                "canonical": "#46433A",
+                "tonalRamp": [
+                    "oklch(15% 0.015 91.7)",
+                    "oklch(26.5% 0.015 91.7)",
+                    "oklch(38% 0.015 91.7)",
+                    "oklch(49.5% 0.015 91.7)",
+                    "oklch(61% 0.015 91.7)",
+                    "oklch(72.5% 0.015 91.7)",
+                    "oklch(84% 0.015 91.7)",
+                    "oklch(95% 0.015 91.7)"
+                ]
+            },
+            "paper-wash": {
+                "role": "neutral",
+                "displayName": "Paper Wash",
+                "canonical": "rgba(255, 255, 255, 0.26)",
+                "tonalRamp": [
+                    "oklch(15% 0 0 / 0.26)",
+                    "oklch(26.5% 0 0 / 0.26)",
+                    "oklch(38% 0 0 / 0.26)",
+                    "oklch(49.5% 0 0 / 0.26)",
+                    "oklch(61% 0 0 / 0.26)",
+                    "oklch(72.5% 0 0 / 0.26)",
+                    "oklch(84% 0 0 / 0.26)",
+                    "oklch(95% 0 0 / 0.26)"
+                ]
+            },
+            "graphite-hairline": {
+                "role": "neutral",
+                "displayName": "Graphite Hairline",
+                "canonical": "rgba(70, 67, 58, 0.18)",
+                "tonalRamp": [
+                    "oklch(15% 0.015 91.7 / 0.18)",
+                    "oklch(26.5% 0.015 91.7 / 0.18)",
+                    "oklch(38% 0.015 91.7 / 0.18)",
+                    "oklch(49.5% 0.015 91.7 / 0.18)",
+                    "oklch(61% 0.015 91.7 / 0.18)",
+                    "oklch(72.5% 0.015 91.7 / 0.18)",
+                    "oklch(84% 0.015 91.7 / 0.18)",
+                    "oklch(95% 0.015 91.7 / 0.18)"
+                ]
+            },
+            "graphite-rule": {
+                "role": "neutral",
+                "displayName": "Graphite Rule",
+                "canonical": "rgba(70, 67, 58, 0.42)",
+                "tonalRamp": [
+                    "oklch(15% 0.015 91.7 / 0.42)",
+                    "oklch(26.5% 0.015 91.7 / 0.42)",
+                    "oklch(38% 0.015 91.7 / 0.42)",
+                    "oklch(49.5% 0.015 91.7 / 0.42)",
+                    "oklch(61% 0.015 91.7 / 0.42)",
+                    "oklch(72.5% 0.015 91.7 / 0.42)",
+                    "oklch(84% 0.015 91.7 / 0.42)",
+                    "oklch(95% 0.015 91.7 / 0.42)"
+                ]
+            }
+        },
+        "typographyMeta": {
+            "display": {
+                "displayName": "Display",
+                "purpose": "The owner's name in the identity header."
+            },
+            "headline": {
+                "displayName": "Headline",
+                "purpose": "Page and content-section headings."
+            },
+            "title": {
+                "displayName": "Title",
+                "purpose": "The pronunciation line beneath the name."
+            },
+            "body": {
+                "displayName": "Body",
+                "purpose": "Biography, current-role context, and explanatory prose."
+            },
+            "label": {
+                "displayName": "Label",
+                "purpose": "Quiet update metadata and tertiary annotations."
+            }
+        },
+        "shadows": [
+            {
+                "name": "portrait-ring",
+                "value": "0 0 0 3px #46433A",
+                "purpose": "A structural outer outline used only around the circular portrait."
+            }
+        ],
+        "breakpoints": [
+            {
+                "name": "two-column",
+                "value": "1120px"
+            }
+        ]
+    },
+    "components": [
+        {
+            "name": "Inline Link",
+            "kind": "custom",
+            "refersTo": "inline-link",
+            "description": "The sole terracotta navigational signal inside prose.",
+            "html": "<a class=\"ds-inline-link\" href=\"#\">Linked reference</a>",
+            "css": ".ds-inline-link { color: #B34741; font-family: \"Vollkorn\", serif; text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.16em; } .ds-inline-link:hover { text-decoration-thickness: 0.14em; } .ds-inline-link:focus-visible { outline: 2px solid #B34741; outline-offset: 3px; }"
+        },
+        {
+            "name": "Field-note Panel",
+            "kind": "card",
+            "refersTo": "field-note",
+            "description": "A flat, translucent editorial container for concise biography content.",
+            "html": "<section class=\"ds-field-note\"><h2>Latest</h2><p>A concise professional update belongs here.</p></section>",
+            "css": ".ds-field-note { color: #46433A; background: rgba(255, 255, 255, 0.26); border: 1px solid rgba(70, 67, 58, 0.18); border-left: 3px solid rgba(70, 67, 58, 0.42); border-radius: 6px; padding: 1rem 1.25rem; font-family: \"Vollkorn\", serif; } .ds-field-note h2 { margin: 0 0 0.6rem; font-size: 2em; } .ds-field-note p { margin: 0; } .ds-field-note:focus-within { border-left-color: #46433A; }"
+        },
+        {
+            "name": "Identity Nameplate",
+            "kind": "custom",
+            "description": "The centered name and pronunciation pairing that accompanies the portrait.",
+            "html": "<header class=\"ds-nameplate\"><h1>Rodrigo C. G. Pena</h1><p>(ʁoˈdɾiɡu ˈse ˈɡe ˈpɛnɐ)</p></header>",
+            "css": ".ds-nameplate { color: #46433A; text-align: center; font-family: \"Vollkorn\", serif; } .ds-nameplate h1 { margin: 0; font-size: clamp(2.3rem, 6vw, 2.8em); font-weight: 700; line-height: normal; } .ds-nameplate p { margin: 0.35rem 0 2em; font-size: 1.3em; }"
+        },
+        {
+            "name": "Profile Navigation",
+            "kind": "nav",
+            "refersTo": "profile-link",
+            "description": "Two compact rows of visible work, contact, and profile destinations with 44px minimum hit areas.",
+            "html": "<nav class=\"ds-profile-nav\" aria-labelledby=\"ds-profile-title\"><h2 id=\"ds-profile-title\">Links &amp; contact</h2><ul class=\"ds-profile-primary\"><li><a href=\"#\">Projects</a></li><li><a href=\"#\">Publications</a></li><li><a href=\"#\">Code</a></li><li><a href=\"#\">Email</a></li></ul><p>More profiles</p><ul class=\"ds-profile-secondary\"><li><a href=\"#\">GitLab</a></li><li><a href=\"#\">ORCID</a></li><li><a href=\"#\">Zenodo</a></li></ul></nav>",
+            "css": ".ds-profile-nav { color: #46433A; font-family: \"Vollkorn\", serif; } .ds-profile-nav h2 { margin: 0 0 0.55rem; font-size: 2em; } .ds-profile-nav ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin: 0; padding: 0; list-style: none; } .ds-profile-nav p { margin: 1rem 0 0.15rem; font-size: 0.8rem; } .ds-profile-primary { font-size: 1rem; font-weight: 700; } .ds-profile-secondary { font-size: 0.8rem; } .ds-profile-nav a { display: inline-flex; box-sizing: border-box; align-items: center; min-width: 44px; min-height: 44px; color: #B34741; padding: 0.35rem 0; text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.16em; } .ds-profile-nav a:hover { text-decoration-thickness: 0.14em; } .ds-profile-nav a:focus-visible { outline: 2px solid #B34741; outline-offset: 3px; }"
+        },
+        {
+            "name": "Fading Divider",
+            "kind": "custom",
+            "description": "A graphite rule that fades into the paper field at both ends.",
+            "html": "<hr class=\"ds-divider\" />",
+            "css": ".ds-divider { border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #46433A, rgba(0, 0, 0, 0)); }"
+        },
+        {
+            "name": "Update Metadata",
+            "kind": "custom",
+            "description": "Quiet centered metadata for a page's last-updated date.",
+            "html": "<p class=\"ds-update-note\">Page updated on August 28, 2026</p>",
+            "css": ".ds-update-note { color: #46433A; margin: 1rem 0 0; text-align: center; font-family: \"Vollkorn\", serif; font-size: 0.8rem; }"
+        }
+    ],
+    "narrative": {
+        "northStar": "The Interdisciplinary Field Note",
+        "overview": "The Interdisciplinary Field Note treats the homepage as a concise page from a working researcher's notebook: personal enough to reveal the person behind the work, structured enough to orient a new collaborator, and spare enough to send visitors onward without friction. Its warm paper ground, bookish serif, circular portrait, and restrained terracotta signals make the page thoughtful and approachable rather than institutional.\n\nThe system is editorial and restrained. Content carries the hierarchy, whitespace keeps the compact page calm, and decoration is limited to hairline borders, one accent color, and a few precise geometric gestures. The result should remain professional but never corporate-polished or formal.",
+        "keyCharacteristics": [
+            "Warm archive-paper canvas with graphite text and a single terracotta signal.",
+            "Bookish, conversational typography using one serif family throughout.",
+            "Flat, paper-like depth built from translucent washes, borders, and outlines.",
+            "Compact editorial composition that privileges biography, links, and the portrait.",
+            "Responsive transition from a stacked personal note to a balanced two-column folio."
+        ],
+        "rules": [
+            {
+                "name": "The One Signal Rule",
+                "body": "Terracotta marks links and small navigational signals; its rarity gives it meaning, so it does not become a large decorative fill.",
+                "section": "colors"
+            },
+            {
+                "name": "The Warm Paper Rule",
+                "body": "Archive Paper is the continuous canvas. White appears only as a translucent wash, never as an opaque card layer.",
+                "section": "colors"
+            },
+            {
+                "name": "The One Voice Rule",
+                "body": "Use Vollkorn across display, prose, and labels; do not create hierarchy by introducing an unrelated display or interface family.",
+                "section": "typography"
+            },
+            {
+                "name": "The Flat Paper Rule",
+                "body": "Content surfaces stay flat at rest; use wash, border, or outline to establish structure instead of soft card shadows.",
+                "section": "elevation"
+            }
+        ],
+        "dos": [
+            "Do keep Archive Paper continuous across the page and use Paper Wash only for gentle grouping.",
+            "Do reserve Terracotta Signal for links and other small paths outward.",
+            "Do build hierarchy with Vollkorn's scale, weight, and whitespace.",
+            "Do preserve the circular portrait, visible two-tier profile navigation, and 1120px two-column transition.",
+            "Do keep decoration structural: hairlines, rules, outlines, and the occasional geometric illustration."
+        ],
+        "donts": [
+            "Don't replace the warm paper-and-terracotta palette with a corporate or institutional color system.",
+            "Don't add opaque white cards, soft floating shadows, glass effects, or dashboard-like surface stacks.",
+            "Don't introduce an unrelated sans-serif or display face without deliberately redesigning the identity.",
+            "Don't turn Terracotta Signal into a large background treatment or ubiquitous accent.",
+            "Don't make the page formal, promotional, or dense at the expense of its concise personal voice."
+        ]
+    }
+}

@@ -10,14 +10,14 @@ type Props = {
 
 const {
   title,
-  description = siteConfig.owner.tagline,
+  description = siteConfig.owner.description,
   canonicalPath,
   noIndex = false
 } = Astro.props;
 
 const resolvedTitle = title
-  ? `${title} • ${siteConfig.owner.tagline}`
-  : `${siteConfig.owner.author} • ${siteConfig.owner.tagline}`;
+  ? `${title} • ${siteConfig.owner.author}`
+  : `${siteConfig.owner.author} • ${siteConfig.owner.headline}`;
 
 const pathname = canonicalPath ?? Astro.url.pathname;
 const canonicalUrl = new URL(pathname, siteConfig.siteUrl).toString();
@@ -34,11 +34,9 @@ const ogImageUrl = new URL(siteConfig.owner.logo, siteConfig.siteUrl).toString()
 
   <link rel="stylesheet" href="/assets/normalize.css" />
   <link rel="stylesheet" href="/assets/main.css" />
-  <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="/assets/academicons/css/academicons.min.css" />
-  <link rel="stylesheet" href="/assets/fontawesome/css/fontawesome.min.css" />
-  <link rel="stylesheet" href="/assets/fontawesome/css/brands.min.css" />
-  <link rel="stylesheet" href="/assets/fontawesome/css/solid.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap" rel="stylesheet" />
 
   <link rel="canonical" href={canonicalUrl} />
 
@@ -47,11 +45,13 @@ const ogImageUrl = new URL(siteConfig.owner.logo, siteConfig.siteUrl).toString()
   {siteConfig.googleVerify && <meta name="google-site-verification" content={siteConfig.googleVerify} />}
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content={siteConfig.owner.tagline} />
+  <meta property="og:title" content={resolvedTitle} />
   <meta property="og:url" content={canonicalUrl} />
   <meta property="og:image" content={ogImageUrl} />
-  <meta property="og:description" content={siteConfig.owner.description} />
-  <meta property="og:site_name" content={siteConfig.owner.tagline} />
+  <meta property="og:description" content={description} />
+  <meta property="og:site_name" content={siteConfig.owner.author} />
+
+  <meta name="twitter:card" content="summary" />
 
   {noIndex && <meta name="robots" content="noindex" />}
 </head>
