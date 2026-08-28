@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 const homepage = await readFile(new URL("../dist/index.html", import.meta.url), "utf8");
@@ -59,6 +59,17 @@ test("makes primary and secondary destinations visible and descriptive", () => {
   assert.doesNotMatch(homepage, />here<\/a>/i);
   assert.doesNotMatch(homepage, /icons below/i);
   assert.doesNotMatch(homepage, /fontawesome|academicons/i);
+});
+
+test("does not publish unused legacy icon libraries", async () => {
+  await assert.rejects(
+    access(new URL("../dist/assets/fontawesome", import.meta.url)),
+    { code: "ENOENT" }
+  );
+  await assert.rejects(
+    access(new URL("../dist/assets/academicons", import.meta.url)),
+    { code: "ENOENT" }
+  );
 });
 
 test("publishes useful professional search and social metadata", () => {
