@@ -2,7 +2,7 @@
 name: Rodrigo C. G. Pena Personal Website
 description: A warm, field-note-inspired personal landing page for an interdisciplinary academic researcher.
 colors:
-    terracotta-signal: "#CE534D"
+    terracotta-signal: "#B34741"
     archive-paper: "#F1EED9"
     graphite-umber: "#46433A"
     paper-wash: "rgba(255, 255, 255, 0.26)"
@@ -54,9 +54,9 @@ components:
         backgroundColor: "{colors.archive-paper}"
         rounded: "{rounded.circle}"
         size: "clamp(200px, 30vw, 400px)"
-    profile-icon-link:
-        textColor: "{colors.graphite-umber}"
-        size: "1.2em"
+    profile-link:
+        textColor: "{colors.terracotta-signal}"
+        typography: "{typography.body}"
 ---
 
 # Design System: Rodrigo C. G. Pena Personal Website
@@ -83,7 +83,7 @@ The palette reads like warm paper, dry pigment, and pencil-dark type: quiet neut
 
 ### Primary
 
-- **Terracotta Signal** (`#CE534D`): The sole accent, used for inline links and other navigational signals that move the visitor beyond the page.
+- **Terracotta Signal** (`#B34741`): The sole accent, darkened to maintain WCAG AA contrast and used for underlined links and other navigational signals that move the visitor beyond the page.
 
 ### Neutral
 
@@ -121,11 +121,11 @@ The palette reads like warm paper, dry pigment, and pencil-dark type: quiet neut
 
 ## Layout
 
-The homepage is mobile-first and vertically stacked below 1000px. The identity header has `2.5rem` outer spacing, the main column has `2.5rem` side margins, and the portrait scales from 200px to 400px with `clamp(200px, 30vw, 400px)`.
+The homepage is mobile-first and vertically stacked below 1120px. Page gutters scale with `clamp(1.25rem, 6vw, 2.5rem)`, the reading column stops at `42rem`, and the portrait scales from 200px to 400px with `clamp(200px, 30vw, 400px)`.
 
-At 1000px and above, the viewport becomes a centered two-column composition: 40% for the portrait and identity, 50% for the biography and links. The columns meet across a `1.25rem` inner gap and retain `2.5rem` outer margins. The wrapper fills at least the viewport height and vertically centers the composition. Field-note panels use `1rem 1.25rem` internal padding with `1.25rem` vertical separation.
+At 1120px and above, the viewport becomes a centered two-column composition with a minimum 22rem identity column, a minimum 32rem reading column, and a `2.5rem` gap. The wrapper is capped at `78rem`, fills at least the viewport height, and vertically centers the composition. Field-note panels use `1rem 1.25rem` internal padding with `1.25rem` vertical separation.
 
-Secondary pages can collapse to a centered single content column. Lists retain generous indents, while the social/profile link cluster is horizontally centered and compact.
+Secondary pages can collapse to a centered single content column. Lists retain generous indents, while professional destinations are grouped into four prominent work/contact links and a smaller row of named secondary profiles.
 
 ## Elevation & Depth
 
@@ -141,7 +141,7 @@ The system remains flat and paper-like. It creates separation with tonal transpa
 
 ## Shapes
 
-The form language is restrained and purposeful. Biography panels use a modest 6px radius that softens their paper-note framing without becoming pill-like. The portrait is a true circle with a double-ring silhouette. Links, headings, dividers, and the icon row otherwise remain unboxed. The animated 404 illustration is the geometric exception: a fine wireframe figure that uses the same graphite color and avoids introducing a second material language.
+The form language is restrained and purposeful. Biography panels use a modest 6px radius that softens their paper-note framing without becoming pill-like. The portrait is a true circle with a double-ring silhouette. Links, headings, dividers, and the profile rows otherwise remain unboxed. The animated 404 illustration is the geometric exception: a fine wireframe figure that uses the same graphite color and avoids introducing a second material language.
 
 ## Components
 
@@ -149,7 +149,8 @@ The form language is restrained and purposeful. Biography panels use a modest 6p
 
 - **Character:** Quietly distinctive editorial references.
 - **Color:** Terracotta Signal at rest.
-- **Hover:** Add an underline without changing the palette.
+- **Default:** Keep an underline visible so links never rely on color alone.
+- **Hover:** Increase underline weight without changing the palette.
 - **Focus:** Preserve a visible, high-contrast keyboard focus indication.
 
 ### Field-note Panels
@@ -168,10 +169,11 @@ The form language is restrained and purposeful. Biography panels use a modest 6p
 
 ### Profile Navigation
 
-- **Style:** A centered, compact row of icon-only links.
-- **Color:** Graphite Umber icons within the warm page field.
-- **Spacing:** Each item has `0.8em` vertical rhythm and small horizontal offsets rather than a container.
-- **Accessibility:** Every icon link carries a descriptive accessible label.
+- **Style:** Compact, left-aligned rows of visibly named links with no surrounding container.
+- **Hierarchy:** Projects, Publications, Code, and Email form the bold primary row; GitLab, ORCID, Zenodo, LinkedIn, and Mastodon form a smaller secondary row under “More profiles.”
+- **Color:** Terracotta Signal with a persistent underline.
+- **Spacing:** Flexible wrapping with a `1rem` horizontal gap preserves comfortable scanning at narrow widths.
+- **Accessibility:** Link text names every destination directly; the order follows the visitor's likely path from work to contact to secondary profiles.
 
 ### Dividers and Metadata
 
@@ -190,7 +192,7 @@ The form language is restrained and purposeful. Biography panels use a modest 6p
 - **Do** keep Archive Paper continuous across the page and use Paper Wash only for gentle grouping.
 - **Do** reserve Terracotta Signal for links and other small paths outward.
 - **Do** build hierarchy with Vollkorn's scale, weight, and whitespace.
-- **Do** preserve the circular portrait, compact profile-link row, and 1000px two-column transition.
+- **Do** preserve the circular portrait, visible two-tier profile navigation, and 1120px two-column transition.
 - **Do** keep decoration structural: hairlines, rules, outlines, and the occasional geometric illustration.
 
 ### Don't:

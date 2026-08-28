@@ -1,10 +1,11 @@
 $text-color: #46433A;
-$anchor-text-color: #CE534D;
+$anchor-text-color: #B34741;
 $background-color: #F1EED9;
-$layout-breakpoint: 1000px;
+$layout-breakpoint: 1120px;
 $small-screen-max: $layout-breakpoint - 1px;
 $outer-gap: 2.5rem;
-$inner-gap: 1.25rem;
+$page-gutter: clamp(1.25rem, 6vw, $outer-gap);
+$reading-width: 42rem;
 $logo-size: clamp(200px, 30vw, 400px);
 
 body {
@@ -24,24 +25,38 @@ header {
 
 /*** wrapper div for both header and main ***/
 .wrapper {
+	box-sizing: border-box;
 	width: auto;
 	position: relative;
 	min-height: 100vh;
 	margin: 0 auto;
+	padding-right: $page-gutter;
+	padding-left: $page-gutter;
 }
 
 /*** anchor tags ***/
 a {
 	color: $anchor-text-color;
-	text-decoration: none;
+	text-decoration: underline;
+	text-decoration-thickness: 0.08em;
+	text-underline-offset: 0.16em;
 
 	&:hover {
-		text-decoration: underline;
+		text-decoration-thickness: 0.14em;
+	}
+
+	&:focus-visible {
+		outline: 2px solid $anchor-text-color;
+		outline-offset: 3px;
 	}
 }
 
 /* markdown unordered lists in main content */
 .content {
+	> h2 {
+		font-size: 2em;
+	}
+
 	ul {
 		padding-left: 1.75rem;
 		padding-right: 1.75rem;
@@ -82,31 +97,42 @@ a {
 	}
 }
 
+/*** professional links ***/
+.profile-navigation {
+	margin-top: 1.75rem;
+}
 
-/*** main content list ***/
-.main-list-item {
+.profile-navigation h2 {
+	font-size: 2em;
+	margin-bottom: 0.55rem;
+}
+
+.profile-link-list {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25rem 1rem;
+	padding: 0;
+	margin: 0;
+}
+
+.profile-link-list a {
+	display: inline-block;
+	padding: 0.35rem 0;
+}
+
+.profile-link-list-primary {
+	font-size: 1rem;
 	font-weight: bold;
-	font-size: 1.2em;
-	margin: 0.8em 0;
-	display: inline list-item;
-	white-space: nowrap;
 }
 
-/* override the left margin added by font awesome for the main content list,
-since it must be aligned with the content */
-.fa-ul.main-list {
-	margin-left: 0;
-	text-align: center;
+.profile-link-label {
+	font-size: 0.8rem;
+	margin: 1rem 0 0.15rem;
 }
 
-/* list icons */
-.main-list-item-icon {
-	position: relative;
-	top: -3px;
-	left: 3px;
-	margin-right: 3px;
-	margin-left: 6px;
-	color: $text-color;
+.profile-link-list-secondary {
+	font-size: 0.8rem;
 }
 
 /*** logo ***/
@@ -118,12 +144,18 @@ since it must be aligned with the content */
 	width: $logo-size;
 	height: $logo-size;
 	display: inline-block;
+	overflow: hidden;
 	border-radius: 50%;
 	border: 2px solid $background-color;
 	box-shadow: 0 0 0 3px $text-color;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: $logo-size $logo-size;
+	text-decoration: none;
+}
+
+.logo img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 /*** author ***/
@@ -163,11 +195,13 @@ footer {
 /* Small devices */
 @media (max-width: $small-screen-max) {
 	header {
-		margin: $outer-gap 0;
+		margin: $page-gutter 0;
 	}
 
 	main {
-		margin: 0 $outer-gap;
+		width: 100%;
+		max-width: $reading-width;
+		margin: 0 auto;
 	}
 }
 
@@ -175,8 +209,11 @@ footer {
 @media (min-width: $layout-breakpoint) {
 	.wrapper {
 		width: 100%;
+		max-width: 78rem;
+		padding: $outer-gap;
 		display: grid;
-		grid-template-columns: 40% 50%;
+		grid-template-columns: minmax(22rem, 0.8fr) minmax(32rem, 1fr);
+		column-gap: $outer-gap;
 		justify-content: center;
 		align-content: center;
 		grid-template-areas:
@@ -189,12 +226,13 @@ footer {
 	header {
 		grid-area: header;
 		text-align: center;
-		margin: 0 $inner-gap 0 $outer-gap;
+		margin: 0;
 	}
 
 	main {
 		grid-area: main;
-		margin: 0 $outer-gap 0 $inner-gap;
+		max-width: $reading-width;
+		margin: 0;
 	}
 
 	footer {

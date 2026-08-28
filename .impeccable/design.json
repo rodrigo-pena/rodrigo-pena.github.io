@@ -1,22 +1,22 @@
 {
     "schemaVersion": 2,
-    "generatedAt": "2026-08-28T08:09:09Z",
+    "generatedAt": "2026-08-28T08:59:10Z",
     "title": "Design System: Rodrigo C. G. Pena Personal Website",
     "extensions": {
         "colorMeta": {
             "terracotta-signal": {
                 "role": "primary",
                 "displayName": "Terracotta Signal",
-                "canonical": "#CE534D",
+                "canonical": "#B34741",
                 "tonalRamp": [
-                    "oklch(15% 0.158 25.72)",
-                    "oklch(26.5% 0.158 25.72)",
-                    "oklch(38% 0.158 25.72)",
-                    "oklch(49.5% 0.158 25.72)",
-                    "oklch(61% 0.158 25.72)",
-                    "oklch(72.5% 0.158 25.72)",
-                    "oklch(84% 0.158 25.72)",
-                    "oklch(95% 0.158 25.72)"
+                    "oklch(15% 0.142 26.09)",
+                    "oklch(26.5% 0.142 26.09)",
+                    "oklch(38% 0.142 26.09)",
+                    "oklch(49.5% 0.142 26.09)",
+                    "oklch(61% 0.142 26.09)",
+                    "oklch(72.5% 0.142 26.09)",
+                    "oklch(84% 0.142 26.09)",
+                    "oklch(95% 0.142 26.09)"
                 ]
             },
             "archive-paper": {
@@ -127,7 +127,7 @@
         "breakpoints": [
             {
                 "name": "two-column",
-                "value": "1000px"
+                "value": "1120px"
             }
         ]
     },
@@ -138,7 +138,7 @@
             "refersTo": "inline-link",
             "description": "The sole terracotta navigational signal inside prose.",
             "html": "<a class=\"ds-inline-link\" href=\"#\">Linked reference</a>",
-            "css": ".ds-inline-link { color: #CE534D; font-family: \"Vollkorn\", serif; text-decoration: none; } .ds-inline-link:hover { text-decoration: underline; } .ds-inline-link:focus-visible { outline: 2px solid #CE534D; outline-offset: 3px; }"
+            "css": ".ds-inline-link { color: #B34741; font-family: \"Vollkorn\", serif; text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.16em; } .ds-inline-link:hover { text-decoration-thickness: 0.14em; } .ds-inline-link:focus-visible { outline: 2px solid #B34741; outline-offset: 3px; }"
         },
         {
             "name": "Field-note Panel",
@@ -158,10 +158,10 @@
         {
             "name": "Profile Navigation",
             "kind": "nav",
-            "refersTo": "profile-icon-link",
-            "description": "A compact centered row of accessible icon links to authoritative profiles.",
-            "html": "<nav class=\"ds-profile-nav\" aria-label=\"Professional profiles\"><a href=\"#\" aria-label=\"Email\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 6h18v12H3zM3 7l9 7 9-7\"/></svg></a><a href=\"#\" aria-label=\"Code profile\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9 18l-6-6 6-6M15 6l6 6-6 6\"/></svg></a><a href=\"#\" aria-label=\"Publications\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 3h14v18H5zM8 8h8M8 12h8M8 16h5\"/></svg></a></nav>",
-            "css": ".ds-profile-nav { display: flex; justify-content: center; gap: 0.8rem; } .ds-profile-nav a { display: inline-flex; color: #46433A; padding: 0.3rem; text-decoration: none; } .ds-profile-nav svg { width: 1.2em; height: 1.2em; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; } .ds-profile-nav a:hover { color: #CE534D; } .ds-profile-nav a:focus-visible { outline: 2px solid #CE534D; outline-offset: 2px; }"
+            "refersTo": "profile-link",
+            "description": "Two compact rows of visible work, contact, and profile destinations.",
+            "html": "<nav class=\"ds-profile-nav\" aria-labelledby=\"ds-profile-title\"><h2 id=\"ds-profile-title\">Links &amp; contact</h2><ul class=\"ds-profile-primary\"><li><a href=\"#\">Projects</a></li><li><a href=\"#\">Publications</a></li><li><a href=\"#\">Code</a></li><li><a href=\"#\">Email</a></li></ul><p>More profiles</p><ul class=\"ds-profile-secondary\"><li><a href=\"#\">GitLab</a></li><li><a href=\"#\">ORCID</a></li><li><a href=\"#\">Zenodo</a></li></ul></nav>",
+            "css": ".ds-profile-nav { color: #46433A; font-family: \"Vollkorn\", serif; } .ds-profile-nav h2 { margin: 0 0 0.55rem; font-size: 2em; } .ds-profile-nav ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin: 0; padding: 0; list-style: none; } .ds-profile-nav p { margin: 1rem 0 0.15rem; font-size: 0.8rem; } .ds-profile-primary { font-size: 1rem; font-weight: 700; } .ds-profile-secondary { font-size: 0.8rem; } .ds-profile-nav a { display: inline-block; color: #B34741; padding: 0.35rem 0; text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.16em; } .ds-profile-nav a:hover { text-decoration-thickness: 0.14em; } .ds-profile-nav a:focus-visible { outline: 2px solid #B34741; outline-offset: 3px; }"
         },
         {
             "name": "Fading Divider",
@@ -214,7 +214,7 @@
             "Do keep Archive Paper continuous across the page and use Paper Wash only for gentle grouping.",
             "Do reserve Terracotta Signal for links and other small paths outward.",
             "Do build hierarchy with Vollkorn's scale, weight, and whitespace.",
-            "Do preserve the circular portrait, compact profile-link row, and 1000px two-column transition.",
+            "Do preserve the circular portrait, visible two-tier profile navigation, and 1120px two-column transition.",
             "Do keep decoration structural: hairlines, rules, outlines, and the occasional geometric illustration."
         ],
         "donts": [

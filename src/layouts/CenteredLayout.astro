@@ -36,16 +36,16 @@ const modifiedLabel =
 ---
 
 <style is:global>
-  @media (max-width: 999px) {
+  @media (max-width: 1119px) {
     .wrapper > main {
-      margin-right: 1.5rem;
-      margin-left: 1.5rem;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 1120px) {
     .wrapper {
-      grid-template-columns: minmax(0, 1fr);
+      grid-template-columns: minmax(0, 42rem);
       grid-template-areas:
         "main"
         "footer";
@@ -56,8 +56,8 @@ const modifiedLabel =
     }
 
     .wrapper > main {
-      margin-right: 2.5rem;
-      margin-left: 2.5rem;
+      margin-right: 0;
+      margin-left: 0;
     }
   }
 </style>
