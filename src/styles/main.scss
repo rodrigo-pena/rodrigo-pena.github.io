@@ -8,8 +8,22 @@ $page-gutter: clamp(1.25rem, 6vw, $outer-gap);
 $reading-width: 42rem;
 $logo-size: clamp(200px, 30vw, 400px);
 
+:root {
+	--type-scale: 1;
+	--type-display: clamp(calc(2.3rem * var(--type-scale)), 6vw, calc(2.8rem * var(--type-scale)));
+	--type-headline: calc(2rem * var(--type-scale));
+	--type-title: calc(1.3rem * var(--type-scale));
+	--type-body: calc(1rem * var(--type-scale));
+	--type-label: calc(0.8rem * var(--type-scale));
+	--type-hero: calc(10rem * var(--type-scale));
+	--line-tight: 1.15;
+	--line-normal: 1.5;
+}
+
 body {
 	font-family: 'Vollkorn', serif;
+	font-size: var(--type-body);
+	line-height: var(--line-normal);
 	color: $text-color;
 	background-color: $background-color;
 }
@@ -54,7 +68,14 @@ a {
 /* markdown unordered lists in main content */
 .content {
 	> h2 {
-		font-size: 2em;
+		font-size: var(--type-headline);
+		line-height: var(--line-tight);
+		margin-top: 1.5em;
+		margin-bottom: 0.4em;
+
+		&:first-child {
+			margin-top: 0;
+		}
 	}
 
 	ul {
@@ -103,7 +124,9 @@ a {
 }
 
 .profile-navigation h2 {
-	font-size: 2em;
+	font-size: var(--type-headline);
+	line-height: var(--line-tight);
+	margin-top: 0;
 	margin-bottom: 0.55rem;
 }
 
@@ -126,17 +149,19 @@ a {
 }
 
 .profile-link-list-primary {
-	font-size: 1rem;
-	font-weight: bold;
+	font-size: var(--type-body);
+	font-weight: 700;
 }
 
 .profile-link-label {
-	font-size: 0.8rem;
+	font-size: var(--type-label);
+	line-height: var(--line-tight);
 	margin: 1rem 0 0.15rem;
 }
 
 .profile-link-list-secondary {
-	font-size: 0.8rem;
+	font-size: var(--type-label);
+	line-height: var(--line-tight);
 }
 
 /*** logo ***/
@@ -164,7 +189,8 @@ a {
 
 /*** author ***/
 .author-container h1 {
-	font-size: clamp(2.3rem, 6vw, 2.8em);
+	font-size: var(--type-display);
+	line-height: var(--line-tight);
 	margin-top: 0;
 	margin-bottom: 0;
 	text-align: center;
@@ -172,8 +198,10 @@ a {
 
 /*** tagline ***/
 .tagline-container p {
-	font-size: 1.3em;
+	font-size: var(--type-title);
+	line-height: var(--line-tight);
 	text-align: center;
+	margin-top: 0.35em;
 	margin-bottom: 2em;
 }
 
@@ -192,7 +220,8 @@ footer {
 }
 
 .poweredby {
-	font-size: 0.8rem;
+	font-size: var(--type-label);
+	line-height: var(--line-tight);
 }
 
 /*** media queries ***/
@@ -285,7 +314,7 @@ footer {
 .not-found-figure .wireframe-fallback {
 	fill: currentColor;
 	font-family: "Vollkorn", serif;
-	font-size: 10rem;
+	font-size: var(--type-hero);
 	font-weight: 700;
 	line-height: 1;
 	letter-spacing: 0;
