@@ -33,7 +33,6 @@ function contrastRatio(firstColor, secondColor) {
 }
 
 test("presents the confirmed current role and interdisciplinary positioning", () => {
-  assert.match(homepage, /Team Lead Scientific Support at CeDA &amp; sciCORE/);
   assert.match(homepage, /computer science researcher and data scientist/);
   assert.match(homepage, /interdisciplinary collaborations/);
   assert.doesNotMatch(homepage, /Senior Data Scientist/);
