@@ -9,7 +9,7 @@ export const siteConfig = {
     author: "Rodrigo C. G. Pena",
     headline: "Computer Science Researcher & Data Scientist",
     description:
-      "Rodrigo C. G. Pena • Website",
+      "Rodrigo C. G. Pena is Team Lead in Scientific Support at CeDA & sciCORE, University of Basel, working on interdisciplinary collaborations in computer science and data science.",
     email: {
       handle: "rcgp",
       provider: "proton.me"
