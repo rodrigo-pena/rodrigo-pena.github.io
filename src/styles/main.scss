@@ -3,8 +3,8 @@ $anchor-text-color: #B34741;
 $background-color: #F1EED9;
 $layout-breakpoint: 1120px;
 $small-screen-max: $layout-breakpoint - 1px;
-$outer-gap: 2.5rem;
-$page-gutter: clamp(1.25rem, 6vw, $outer-gap);
+$outer-gap: var(--space-xl);
+$page-gutter: clamp(var(--space-inner), 6vw, var(--space-xl));
 $reading-width: 42rem;
 $logo-size: clamp(200px, 30vw, 400px);
 
@@ -18,6 +18,12 @@ $logo-size: clamp(200px, 30vw, 400px);
 	--type-hero: calc(10rem * var(--type-scale));
 	--line-tight: 1.15;
 	--line-normal: 1.5;
+	--space-xs: 0.25rem;
+	--space-sm: 0.5rem;
+	--space-md: 1rem;
+	--space-inner: 1.25rem;
+	--space-lg: 1.5rem;
+	--space-xl: 2.5rem;
 }
 
 body {
@@ -70,8 +76,9 @@ a {
 	> h2 {
 		font-size: var(--type-headline);
 		line-height: var(--line-tight);
-		margin-top: 1.5em;
-		margin-bottom: 0.4em;
+		margin-top: var(--space-lg);
+		margin-bottom: var(--space-sm);
+		text-wrap: balance;
 
 		&:first-child {
 			margin-top: 0;
@@ -105,8 +112,8 @@ a {
 		border: 1px solid rgba(70, 67, 58, 0.18);
 		border-left: 3px solid rgba(70, 67, 58, 0.42);
 		border-radius: 6px;
-		padding: 1rem 1.25rem;
-		margin: 1.25rem 0;
+		padding: var(--space-md) var(--space-inner);
+		margin: var(--space-inner) 0;
 	}
 
 	.text-group > :first-child {
@@ -120,21 +127,22 @@ a {
 
 /*** professional links ***/
 .profile-navigation {
-	margin-top: 1.75rem;
+	margin-top: calc(var(--space-lg) + var(--space-xs));
 }
 
 .profile-navigation h2 {
 	font-size: var(--type-headline);
 	line-height: var(--line-tight);
 	margin-top: 0;
-	margin-bottom: 0.55rem;
+	margin-bottom: var(--space-sm);
+	text-wrap: balance;
 }
 
 .profile-link-list {
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
-	gap: 0.25rem 1rem;
+	gap: var(--space-xs) var(--space-md);
 	padding: 0;
 	margin: 0;
 }
@@ -156,7 +164,7 @@ a {
 .profile-link-label {
 	font-size: var(--type-label);
 	line-height: var(--line-tight);
-	margin: 1rem 0 0.15rem;
+	margin: var(--space-md) 0 var(--space-xs);
 }
 
 .profile-link-list-secondary {
@@ -194,6 +202,7 @@ a {
 	margin-top: 0;
 	margin-bottom: 0;
 	text-align: center;
+	text-wrap: balance;
 }
 
 /*** tagline ***/
@@ -202,7 +211,7 @@ a {
 	line-height: var(--line-tight);
 	text-align: center;
 	margin-top: 0.35em;
-	margin-bottom: 2em;
+	margin-bottom: var(--space-xl);
 }
 
 /******/
@@ -216,7 +225,7 @@ hr {
 footer {
 	text-align: center;
 	width: 100%;
-	margin-top: 1rem;
+	margin-top: var(--space-md);
 }
 
 .poweredby {
@@ -298,7 +307,7 @@ footer {
 	display: block;
 	width: min(100%, 38rem);
 	height: auto;
-	margin: 0 auto 1.5rem;
+	margin: 0 auto var(--space-lg);
 }
 
 .not-found-figure .wireframe-edge {
@@ -326,5 +335,5 @@ footer {
 }
 
 .not-found p {
-	margin: 0.5rem 0;
+	margin: var(--space-sm) 0;
 }
