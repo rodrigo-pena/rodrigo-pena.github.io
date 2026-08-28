@@ -9,7 +9,7 @@ export const siteConfig = {
     author: "Rodrigo C. G. Pena",
     headline: "Computer Science Researcher & Data Scientist",
     description:
-      "Rodrigo C. G. Pena • Personal Website",
+      "Rodrigo C. G. Pena • Website",
     email: {
       handle: "rcgp",
       provider: "proton.me"
